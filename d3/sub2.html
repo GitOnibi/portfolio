@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>tim burton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common.css">
+    <style>
+        #visual { width:100%; height:100%; }
+        #visual .s1txtbox {
+            width:1140px; height:100%;
+            margin:0 auto;
+        }
+        div.s1txtbox h1 {
+            margin-top:200px;
+            font-size:50px; letter-spacing:5px;
+            color:#fff; text-align:center;
+        }
+        div.s1txtbox h1:after { content:" "; display:block; width:100px; height:4px; background-color:yellow; margin:40px auto; }
+        p.p11 { margin-top:50px; color:rgba(255,255,255,0.5); font-weight:bold; text-align:center; }
+        p.p11 strong { color:rgba(255,255,255,1); font-size:20px; line-height:1.5; }
+        p.p12 { margin-top:60px; margin-left:25%; font-size:16px; font-weight:bold; color:#fff; line-height:1.5; }
+        
+        .ck {
+            display:none;
+        }
+        div.introWrap {
+            width:100%; height:220px;
+            background-color:#fff;
+            padding:20px;
+            margin:0 auto;
+            box-sizing:border-box;
+        }
+        div.introWrap img {
+            float:left;
+            display:block;
+            width:auto; height:100%;
+        }
+        p.introComment {
+            float:left;
+            font-size:1rem; font-weight:bold;
+            line-height:1.6;
+            margin-left:30px;
+        }
+        p.introComment strong {
+            font-size:2rem;
+        }
+        div.tabWrap {
+            width:100%;
+            background-color:#fff;
+        }
+        div.tabWrap .tabLabel {
+            float:left;
+            display:block;
+            width:20%; height:50px;
+            background-color:#ccc;
+            text-align:center; line-height:50px;
+            border:1px solid #999;
+            box-sizing:border-box;
+        }
+        div.tabCon {
+            clear:both;
+            display:none;
+            width:100%;
+            box-sizing:border-box;
+            padding:40px;
+            
+        }
+        .tabCon:nth-of-type(1) p.tabComment {
+            text-indent:10px;
+        }
+        input#tabra01:checked ~ .tabWrap .tabCon:nth-of-type(1) { display:block; }
+        input#tabra01:checked ~ .tabWrap .tabLabel:nth-of-type(1) { background-color:#fff; border-bottom:0; }
+        input#tabra02:checked ~ .tabWrap .tabCon:nth-of-type(2) { display:block; }
+        input#tabra02:checked ~ .tabWrap .tabLabel:nth-of-type(2) { background-color:#fff; border-bottom:0; }
+        input#tabra03:checked ~ .tabWrap .tabCon:nth-of-type(3) { display:block; }
+        input#tabra03:checked ~ .tabWrap .tabLabel:nth-of-type(3) { background-color:#fff; border-bottom:0; }
+        input#tabra04:checked ~ .tabWrap .tabCon:nth-of-type(4) { display:block; }
+        input#tabra04:checked ~ .tabWrap .tabLabel:nth-of-type(4) { background-color:#fff; border-bottom:0; }
+        input#tabra05:checked ~ .tabWrap .tabCon:nth-of-type(5) { display:block; }
+        input#tabra05:checked ~ .tabWrap .tabLabel:nth-of-type(5) { background-color:#fff; border-bottom:0; }
+    </style>
+    <link rel="stylesheet" href="ft.css">
+</head>
+<body>
+    <header id="hd">
+        <div class="tnbwrap">
+            <a href="index.html" class="logo">
+                <img src="./images/logo1.png" alt="">
+            </a>
+            <p class="hdtxt">12.12 - 04.14<br/>대전시립미술관 본관 2, 3층</p>
+            <ul class="tnb">
+                <li><a href="" class="tnbico fbicon"></a></li>
+                <li><a href="" class="tnbico twicon"></a></li>
+                <li><a href="" class="tnbico blicon"></a></li>
+            </ul>
+        </div>
+        <div class="hdline"></div>
+        <ul class="gnb">
+            <li><a href="sub1.html">전시소개</a></li>
+            <li><a href="sub2.html">작가소개</a></li>
+            <li><a href="sub3.html">참가신청</a></li>
+            <li><a href="sub4.html">관람안내</a></li>
+            <li><a href="sub5.html">아트워크</a></li>
+            <li><a href="sub6.html">갤러리</a></li>
+        </ul>
+    </header>
+    <figure id="visual">
+        <div class="s1txtbox">
+            <h1>작가소개</h1>
+            <div class="introWrap">
+                <img src="./images/timFace.jpg" alt="">
+                <p class="introComment">
+                    <strong>팀 버튼</strong><br />
+                    외국작가 > 방송/공연예술인 > 영화인＞영화감독<br />
+                    출생지 : 미국 California<br />
+                    출생 : 1958년 08월 25일<br />
+                    데뷔년도 : 1982년<br />
+                    데뷔내용 : 영화 '빈센트'<br />
+                </p>
+            </div>
+            <div class="tabWrap">
+                <input type="radio" name="tabra" id="tabra01" class="ck" checked />
+                <input type="radio" name="tabra" id="tabra02" class="ck" />
+                <input type="radio" name="tabra" id="tabra03" class="ck" />
+                <input type="radio" name="tabra" id="tabra04" class="ck" />
+                <input type="radio" name="tabra" id="tabra05" class="ck" />
+                <div class="tabWrap">
+                    <label for="tabra01" class="tabLabel">작가소개</label>
+                    <label for="tabra02" class="tabLabel">학력</label>
+                    <label for="tabra03" class="tabLabel">수상</label>
+                    <label for="tabra04" class="tabLabel">경력</label>
+                    <label for="tabra05" class="tabLabel">추가정보</label>
+                    <div class="tabCon">
+                        <p class="tabComment">
+                            미국 캘리포니아주 버뱅크에서 태어났다. 어린 시절 B급 공포영화에 매료되어 1950년대 공포영화의 대표적인 배우 빈센트 프라이스(Vincent Price)를 자신의 우상으로 삼았다. 캘리포니아 예술대학에서 애니메이션을 전공하고, 월트디즈니에서 잠깐 근무하다가 1982년 애니메이션 단편영화 '빈센트 Vincent'를 발표하였다. 1985년 워너브라더스에서 제작한 첫 장편영화 '피위의 대모험 Pee-Wee's Big Adventure'이 흥행에 성공을 거두고 이어서 호러영화 '비틀주스 Beetlejuice'(1988)가 박스오피스 순위에 오르면서 흥행감독으로 명성을 얻게 되었다. 블록버스터 '배트맨 Batman'(1989)과 '가위손 Edward Scissor-hands'(1990), '크리스마스의 악몽 The Nightmare Before Christmas'(1993), '에드 우드 Ed Wood'(1994), '화성침공 Mars Attacks!'(1996), '슬리피 할로우 Sleepy Hollow'(1999) 등을 통하여 동화적 아름다움과 공포영화의 전율, 코미디적 요소가 뒤섞인 특유의 영화스타일을 보여주었다.
+                        </p>
+                    </div>
+                    <div class="tabCon">
+                        <p class="tabComment">캘리포니아 예술대학교 애니메이션 전공</p>
+                    </div>
+                    <div class="tabCon">
+                        <p class="tabComment">
+                            1989 The National Association of Theatre Owners 올해 최고의 감독상<br />
+                            아카데미 시상식 세트 디자인 상<br />
+                            2007 제64회 베니스국제영화제 평생공로상<br />
+                        </p>
+                    </div>
+                    <div class="tabCon">
+                        <p class="tabComment">
+                            디즈니 스튜디오 근무<br />
+                            2005. 영화 '유령신부'<br />
+                            2008. 영화 '스위니토드-어느 잔혹한 이발사 이야기'<br />
+                        </p>
+                    </div>
+                    <div class="tabCon">
+                        <p class="tabComment">
+                            본명 : Burton, Timothy William<br />
+                            홈페이지 주소 : www.timburtoncollective.com<br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </figure>
+    <footer id="ft">
+        <ul class="ftitem">
+            <li class="ftlogo"><img src="./images/logo1.png" alt=""></li>
+            <li class="ftcomment">
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> 팀버튼전 관리사무소 02-2143-5832 | <i class="fa fa-envelope" aria-hidden="true"></i> hicuri@naver.com<br/>(C) RYU ALL RIGHTS RESERVED</p>
+            </li>
+            <li class="ftsite">
+                <a href="http://dope.dothome.co.kr/d1">| DOPE |</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

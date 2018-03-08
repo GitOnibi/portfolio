@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ONIQLO</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        ul.itemwrap {
+            margin:0 auto;
+            width:640px; height:100%;
+            background-color:rgba(255,255,255,0.7);
+        }
+        ul.itemwrap li.logo { height:300px; }
+        ul.itemwrap li.logo a {
+            display:block;
+            width:100%; height:300px;
+            background-image:url(./images/logo1.jpg);
+            background-size:200px 200px;
+            background-repeat:no-repeat;
+            background-position:center center;
+        }
+        ul.itemwrap li.item { transition:1s;
+            width:400px; height:90px;
+            text-align:center;
+            margin:0 auto;
+        }
+        ul.itemwrap li.item a { transition:1s;
+            line-height:90px;
+            font-size:30px; font-weight:bold;
+            letter-spacing:5px;
+        }
+        li.itembg { z-index:-10;
+            width:100%; height:100%;
+            position:absolute; top:0; left:0;
+            background-image:url(./images/main1.jpg);
+            background-position:center top;
+            background-size:cover;
+        }
+        ul.bgs { z-index:-1;
+            width:100%; height:100%;
+            position:absolute; top:0; left:0;
+        }
+        ul.bgs li { width:100%; height:100%; background-size:cover; background-position:center top; }
+        li.bg1 { display:none; background-image:url(./images/main1.jpg); }
+        li.bg2 { display:none; background-image:url(./images/main2.jpg); }
+        li.bg3 { display:none; background-image:url(./images/main3.jpg); }
+        li.bg4 { display:none; background-image:url(./images/main4.jpg); }
+        li.bg5 { display:none; background-image:url(./images/main5.jpg); }
+        li.bg6 { display:none; background-image:url(./images/main6.jpg); }
+        
+        li.item1:hover ~ li.bgwrap ul.bgs li.bg1 { display:block; }
+        li.item2:hover ~ li.bgwrap ul.bgs li.bg2 { display:block; }
+        li.item3:hover ~ li.bgwrap ul.bgs li.bg3 { display:block; }
+        li.item4:hover ~ li.bgwrap ul.bgs li.bg4 { display:block; }
+        li.item5:hover ~ li.bgwrap ul.bgs li.bg5 { display:block; }
+        li.item6:hover ~ li.bgwrap ul.bgs li.bg6 { display:block; }
+        
+        li.item:hover { background-color:#c00; box-shadow:5px 5px 5px rgba(0,0,0,0.5); }
+        li.item:hover > a { color:#ff0; text-shadow:2px 2px 2px rgba(0,0,0,0.5); }
+    </style>
+    <link rel="stylesheet" href="ft.css">
+</head>
+<body>
+    <div id="wrapper">
+        <ul class="itemwrap">
+            <li class="logo"><a href="index.html"></a></li>
+            <li class="item item1"><a href="sub1.html">ONIQLO?</a></li>
+            <li class="item item2"><a href="sub2.html">WOMEN</a></li>
+            <li class="item item3"><a href="sub3.html">MEN</a></li>
+            <li class="item item4"><a href="sub4.html">KISDS</a></li>
+            <li class="item item5"><a href="sub5.html">BABY</a></li>
+            <li class="itembg"></li>
+            <li class="bgwrap">
+                <ul class="bgs">
+                    <li class="bg bg1"></li>
+                    <li class="bg bg2"></li>
+                    <li class="bg bg3"></li>
+                    <li class="bg bg4"></li>
+                    <li class="bg bg5"></li>
+                    <li class="bg bg6"></li>
+                </ul>
+            </li>
+        </ul>
+        <footer id="ft">
+            <ul class="fnb">
+                <li class="flogo"><a href="index.html"></a></li>
+                <li><a href="sub1.html">ONIQLO?</a></li>
+                <li><a href="sub2.html">WOMEN</a></li>
+                <li><a href="sub3.html">MEN</a></li>
+                <li><a href="sub4.html">KISDS</a></li>
+                <li><a href="sub5.html">BABY</a></li>
+                <li><a href="sub6.html">ITEMS</a></li>
+            </ul>
+            <ul class="sns">
+                <li><a href="https://ko-kr.facebook.com/uniqlo.kr/" target="_blank" ></a></li>
+                <li><a href="https://twitter.com/hashtag/%EC%9C%A0%EB%8B%88%ED%81%B4%EB%A1%9C" target="_blank"></a></li>
+                <li><a href="http://blog.eland.co.kr/" target="_blank"></a></li>
+                <li><a href="https://pf.kakao.com/_ytpmR" target="_blank"></a></li>
+            </ul>
+            <p class="copy">Copyrights &copy; 2017 ONIQLO all right reserved</p>
+        </footer>
+    </div>
+</body>
+</html>

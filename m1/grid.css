@@ -1,0 +1,186 @@
+/* grid system scss */
+.grid10-1 li {
+  width: 10%;
+}
+
+.grid10-2 li {
+  width: 20%;
+}
+
+.grid10-3 li {
+  width: 30%;
+}
+
+.grid10-4 li {
+  width: 40%;
+}
+
+.grid10-5 li {
+  width: 50%;
+}
+
+.grid10-6 li {
+  width: 60%;
+}
+
+.grid10-7 li {
+  width: 70%;
+}
+
+.grid10-8 li {
+  width: 80%;
+}
+
+.grid10-9 li {
+  width: 90%;
+}
+
+.grid10-10 li {
+  width: 100%;
+}
+
+.grid12-1 li {
+  width: 8%;
+}
+
+.grid12-1 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-1 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-2 li {
+  width: 16%;
+}
+
+.grid12-2 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-2 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-3 li {
+  width: 24%;
+}
+
+.grid12-3 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-3 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-4 li {
+  width: 32%;
+}
+
+.grid12-4 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-4 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-5 li {
+  width: 40%;
+}
+
+.grid12-5 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-5 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-6 li {
+  width: 48%;
+}
+
+.grid12-6 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-6 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-7 li {
+  width: 56%;
+}
+
+.grid12-7 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-7 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-8 li {
+  width: 64%;
+}
+
+.grid12-8 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-8 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-9 li {
+  width: 72%;
+}
+
+.grid12-9 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-9 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-10 li {
+  width: 80%;
+}
+
+.grid12-10 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-10 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-11 li {
+  width: 88%;
+}
+
+.grid12-11 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-11 li:last-child {
+  margin-right: 2%;
+}
+
+.grid12-12 li {
+  width: 96%;
+}
+
+.grid12-12 li:first-child {
+  margin-left: 2%;
+}
+
+.grid12-12 li:last-child {
+  margin-right: 2%;
+}
+
+/*# sourceMappingURL=grid.css.map */

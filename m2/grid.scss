@@ -1,0 +1,15 @@
+$end10: 10;
+$end12: 12;
+
+@for $i from 1 through $end10 {
+    .grid10-#{$i} {
+        width:10% * $i;
+    }
+}
+
+@for $i from 1 through $end12 {
+    .grid12-#{$i} {
+        width:8% * $i;
+    }
+}
+

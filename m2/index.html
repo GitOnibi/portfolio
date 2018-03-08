@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0, user-scalable=no" />
+    <!-- subject=홈페이지 주제 -->
+    <meta name="subject" content="꽃" />
+    <!-- title=홈페이지 이름 -->
+    <meta name="title" content="컬투플라워" />
+    <!-- author=홈페이지 제작자 -->
+    <meta name="author" content="RYU" />
+    <!-- keyword=홈페이지 키워드 -->
+    <meta name="keywords" content="꽃 꽃배달 꽃선물 컬투플라워" />
+    <!-- description=홈페이지 설명문 -->
+    <meta name="description" content="전국 꽃배달 및 꽃선물은 컬투플라워와 함께" />
+    <title>Cultwo-Flower</title>
+    <script type="text/javascript" src="./script.js"></script>
+    <link rel="stylesheet" href="./hd.css">
+    <link rel="stylesheet" href="./grid.css">
+    <style>
+    /* 초기화 */    
+        * { margin:0; padding:0; }
+        html, body { width:100%; height:100%; }
+        a { text-decoration:none; }
+        ul { list-style:none; }
+        img { border:0; }
+        .ck { display:none; }
+        
+    /* grid common */
+        .first { margin-left:2%; border-left:0px; }
+        .last { margin-right:2%; border-right:0px; }
+        
+    /* 배너영역 */
+        #visual { width:100%; }
+        #visual img { display:block; width:100%; height:auto; }
+    </style>
+    <link rel="stylesheet" href="./ft.css">
+    <link rel="stylesheet" href="./popmenu.css">
+</head>
+<body>
+    <div id="contain">
+        <header id="hd">
+            <a href="" class="logo">
+                <img src="./img/logo.png" alt="로고">
+            </a>
+            <h1>대표전화 1588-1855</h1>
+        </header>
+        <figure id="visual">
+            <img src="./img/banner01.jpg" alt="감사의마음을 전하세요">
+            <img src="./img/banner03.jpg" alt="새출발하는 청춘에게">
+            <img src="./img/banner02.jpg" alt="사랑을 고백하는 가장 좋은 방법">
+        </figure>
+        <footer id="ft">
+            <nav id="fnb">
+                <ul class="icon_wrap">
+                    <li class="col-3">
+                        <a href="sub1.html" class="icon1"></a>
+                    </li>
+                    <li class="col-3">
+                        <a href="sub2.html" class="icon2"></a>
+                    </li>
+                    <li class="col-3">
+                        <a href="sub3.html" class="icon3"></a>
+                    </li>
+                    <li class="col-3">
+                        <a href="sub4.html" class="icon4"></a>
+                    </li>
+                    <li class="col-3">
+                        <a href="login_form.php" class="icon5"></a>
+                    </li>
+                    <li class="col-3">
+                        <a href="tel:010-4020-0394" class="icon6"></a>
+                    </li>
+                    <li class="col-3">
+                        <a href="sms:010-4020-0394" class="icon7"></a>
+                    </li>
+                    <li class="col-3">
+                        <a href="mailto:hicuri@naver.com" class="icon8"></a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="copyrights">Designed by RYU</p>
+        </footer>
+        <input type="checkbox" id="pop_ck" class="ck">
+        <label for="pop_ck" class="poplabel">+</label>
+        <div class="popmenu">
+            <ul class="popiconwrap">
+                <li class="popicon">
+                    <a href="sub1.html" class="icon1"></a>
+                </li>
+                <li class="popicon">
+                    <a href="sub2.html" class="icon2"></a>
+                </li>
+                <li class="popicon">
+                    <a href="sub3.html" class="icon3"></a>
+                </li>
+                <li class="popicon">
+                    <a href="sub4.html" class="icon4"></a>
+                </li>
+                <li class="popicon">
+                    <a href="login_form.php" class="icon5"></a>
+                </li>
+                <li class="popicon">
+                    <a href="tel:010-4020-0394" class="icon6"></a>
+                </li>
+                <li class="popicon">
+                    <a href="sms:010-4020-0394" class="icon7"></a>
+                </li>
+                <li class="popicon">
+                    <a href="mailto:hicuri@naver.com" class="icon8"></a>
+                </li>
+                <li>
+                    <a href="./board/list.php" class="bbs">QnA게시판</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* grid system scss */
+$end10: 10;
+$end12: 12;
+
+@for $i from 1 through $end10 {
+    .grid10-#{$i} li{
+        width:10% * $i;
+    }
+}
+
+@for $i from 1 through $end12 {
+    .grid12-#{$i} li{
+        width:8% * $i;
+    }
+    .grid12-#{$i} li:first-child { margin-left:2%; }
+    .grid12-#{$i} li:last-child { margin-right:2%; }
+}

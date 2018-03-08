@@ -1,0 +1,48 @@
+/* footer */
+#ft {
+    width:100%; height:60px;
+    position:fixed; bottom:0;
+    background-color:rgba(0,0,0,0.7);
+    min-width:1400px;
+}
+ul.fnb { float:left; height:60px; margin-left:50px; }
+ul.fnb li {
+    float:left; height:60px; margin-right:20px;
+}
+ul.fnb li a { transition:0.5s;
+    font-size:0.8em; font-weight:bold;
+    color:#aaa;
+    text-align:center; line-height:60px;
+}
+ul.fnb li a:hover { color:#fff; }
+
+li.flogo a {
+    display:block;
+    width:60px; height:60px;
+    background-image:url(./images/logo1.jpg);
+    background-size:40px 40px;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+ul.sns {
+    position:absolute; bottom:0; left:50%; transform:translate(-50%,0%);
+    width:240px; height:60px;
+}
+ul.sns li { float:left; width:60px; height:60px; }
+ul.sns li a {
+    display:block; width:30px; height:30px;
+    background-image:url(./images/sns.png);
+    background-repeat:no-repeat;
+    margin-top:15px; margin-left:15px;
+}
+ul.sns li:nth-of-type(1) a { background-position:0 0; }
+ul.sns li:nth-of-type(2) a { background-position:-30px 0; }
+ul.sns li:nth-of-type(3) a { background-position:-60px 0; }
+ul.sns li:nth-of-type(4) a { background-position:-90px 0; }
+p.copy {
+    float:right; margin-right:50px;
+    height:60px;
+    text-align:center; line-height:60px;
+    font-size:0.8em; font-weight:bold;
+    color:#aaa;
+}

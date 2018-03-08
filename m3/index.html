@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <!-- subject=홈페이지 주제 -->
+    <meta name="subject" content="서울도시주택공사" />
+    <!-- title=홈페이지 이름 -->
+    <meta name="title" content="서울도시주택공사" />
+    <!-- author=홈페이지 제작자 -->
+    <meta name="author" content="RYU" />
+    <!-- keyword=홈페이지 키워드 -->
+    <meta name="keywords" content="SH SH서울도시주택공사 SH서울 서울도시주택공사 도시주택공사" />
+    <!-- description=홈페이지 설명문 -->
+    <meta name="description" content="지역 성장의 기둥이 되다" />
+    <title>SH서울도시주택공사</title>
+    <link rel="stylesheet" href="./grid.css" />
+    <style>
+    /* font */
+        /* font-family: 'Noto Sans KR', sans-serif; */
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); 
+    /* normalize */    
+        * { margin:0; padding:0; }
+        html, body { width:100%; height:100%; }
+        a { text-decoration:none; }
+        ul { list-style:none; }
+        img { border:0; }
+        .ck { display:none; }
+    /* common */
+        #contain {
+            overflow-x:hidden;
+            transition:0.5s;
+            width: 200%; height:100%;
+            margin-left:-100%;
+        }
+        #contain li.contain_lst {
+            float:left;
+            width:50%; height:100%;
+        }
+        input#popmenu_input:checked ~ #contain { margin-left:-20%; }
+    /* li_main */
+        #main { position:relative; }
+    /* main header */
+        #hd {
+            position:relative;
+            height:50px;
+            background:#fff;
+            box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+        }
+        .popmenu_label {
+            position:absolute; left:0; top:0;
+            display:block;
+            width:50px; height:50px;
+            background-image:url(./img/btn_allMenu.gif);
+            background-size:cover;
+        }
+        .logo {
+            display:block;
+            width:50%; height:50px;
+            background-image:url(./img/sh_logo.png);
+            background-size:100% auto;
+            background-position:center center;
+            background-repeat:no-repeat;
+            margin:0 auto;
+        }
+        .home {
+            position:absolute; right:0; top:0;
+            display:block;
+            width:50px; height:50px;
+            background-image:url(./img/btn_home.gif);
+            background-size:cover;
+        }
+    /* main content */
+        #content { margin-top:10px; }
+        .item_wrap {  }
+        .item {
+            float:left;
+            height:150px;
+            background:blue;
+            border:5px solid #fff; box-sizing:border-box;
+        }
+        .item:nth-of-type(1) { height:300px; background:#13b4cb; }
+        .item:nth-of-type(2) { background:#6c71b5; }
+        .item:nth-of-type(3) { background:#63ba4d; }
+        .item:nth-of-type(4) { background:#079164; }
+        .item:nth-of-type(5) { background:#c6952a; }
+        .item_a {
+            position:relative;
+            display:block;
+            width:100%; height:100%;
+        }
+        .item_a_p {
+            position:absolute; top:10%; left:50%;
+            transform:translate(-50%,0%);
+            font-size:1.1em; font-weight:bold;
+            color:#fff;
+            text-align:center;
+            box-sizing:border-box;
+        }
+        .item:nth-of-type(1) .item_a_p {
+            font-size:1.5em;
+        }
+        .item_a_img {
+            position:absolute; bottom:5%; left:50%;
+            transform:translate(-50%,0%);
+            display:block;
+            width:60%; height:auto;
+        }
+        .item:nth-of-type(1) .item_a_img {
+            width:90%; height:auto;
+            margin-top: 50px;
+        }
+    /* main footer */
+        #ft {
+            position:absolute; left:0; bottom:0;
+            z-index:10;
+            width:100%; height:120px;
+            background:#fff;
+            box-shadow:0px -5px 10px rgba(0,0,0,0.2);
+        }
+        #fnb { height:40px; }
+        .fnb_li {
+            float:left;
+            height:40px;
+            text-align:center;
+            border:1px solid rgba(0,0,0,0.1); box-sizing:border-box;
+        }
+        .fnb_li_a {
+            display:block;
+            width:100%; height:100%;
+            line-height:40px;
+            color:#555;
+            font-size:0.75em;
+        }
+        .phone {
+            display:block;
+            float:left;
+            width:55%; height:50px;
+            font-size:1.1em; font-weight:bold;
+            text-align:center; line-height:50px;
+            color:#555;
+            border:1px solid rgba(0,0,0,0.1); box-sizing:border-box;
+        }
+        .sns_warp {
+            float:right;
+            width:45%; height:50px;
+            border:1px solid rgba(0,0,0,0.1); box-sizing:border-box;
+        }
+        .sns {
+            float:left;
+            width:33.33%; height:50px;
+        }
+        .sns_a {
+            display:block;
+            float:left;
+            width:100%; height:100%;
+            background-size:30px 30px;
+            background-position:center center;
+            background-repeat:no-repeat;
+        }
+        .sns:nth-of-type(1) .sns_a{
+            background-image:url(./img/sns_blog.gif);
+        }
+        .sns:nth-of-type(2) .sns_a{
+            background-image:url(./img/sns_facebook.gif);
+        }
+        .sns:nth-of-type(3) .sns_a{
+            background-image:url(./img/sns_twitter.gif);
+        }
+        .copyrights {
+            clear:both;
+            height:30px;
+            font-size:0.5em;
+            text-align:center; line-height:25px;
+            color:#555;
+            border:1px solid rgba(0,0,0,0.1); box-sizing:border-box;
+        }
+    /* li_pop */
+        #pop {
+            position:relative;
+            background:#eee;
+            padding-left:10%;
+            box-sizing:border-box;
+        }
+    /* pop header */
+        #pop_hd {
+            width:100%; height:200px;
+            background:#333;
+            padding-top:125px;
+            box-sizing:border-box;
+        }
+        .pop_login {
+            display:block;
+            width:50%; height:50px;
+            background:orange;
+            margin:0 auto;
+            font-size:1.1em; font-weight:bold;
+            text-align:center; line-height:50px;
+            color:#fff;
+        }
+    /* pop content */
+        #pop_menu_wrap {
+            width:100%;
+        }
+        .pop_menu {
+            width:100%;
+        }
+        .pop_menu_a {
+            display:block;
+            width:100%; height:50px;
+            background:#555;
+            border:1px solid rgba(255,255,255,0.5); box-sizing:border-box;
+        }
+        .pop_menu_a_img {
+            display:block;
+            float:left;
+            width:50xp; height:50px;
+            margin-left:25%;
+        }
+        .pop_menu_a_p {
+            float:right;
+            margin-right:25%;
+            font-size:0.8em;
+            color:#fff;
+            line-height:50px;
+            letter-spacing:30px;
+        }
+        .pop_menu_a_p:nth-of-type(1) {
+            letter-spacing:0px;
+        }
+    /* pop footer */
+        #pop_ft {
+            clear:both;
+            width:100%; height:50px;
+        }
+        .pop_phone {
+            display:block;
+            width:100%; height:50px;
+            font-size:1.2em; font-weight:bold;
+            text-align:center; line-height:50px;
+            color:#555;
+        }
+    /* responsive */
+        @media screen and (min-width:767px) {
+            .logo {
+                background-size:auto 80%;
+                background-position:center center;
+                background-repeat:no-repeat;
+            }
+            .item { height:280px; }
+            .item:nth-of-type(1) { height:560px; }
+            .item_a_p {
+                font-size:2em; font-weight:bold;
+                color:#fff;
+                text-align:center;
+                padding-top:10px;
+                box-sizing:border-box;
+            }
+            .item:nth-of-type(1) .item_a_p {
+                font-size:2.5em;
+                line-height:2;
+            }
+            .item_a_img {
+                display:block;
+                width:50%; height:auto;
+                margin:0 auto;
+            }
+            .item:nth-of-type(1) .item_a_img {
+                width:80%; height:auto;
+                margin-top: 50px;
+            }
+        }
+        @media screen and (min-width:1023px) {
+            .logo {
+                background-size:auto 80%;
+                background-position:center center;
+                background-repeat:no-repeat;
+            }
+            .item { height:390px; }
+            .item:nth-of-type(1) { height:780px; }
+            .item_a_p {
+                font-size:3em; font-weight:bold;
+                color:#fff;
+                text-align:center;
+                padding-top:10px;
+                box-sizing:border-box;
+            }
+            .item:nth-of-type(1) .item_a_p {
+                font-size:3.5em;
+                line-height:2;
+            }
+            .item_a_img {
+                display:block;
+                width:50%; height:auto;
+                margin:0 auto;
+            }
+            .item:nth-of-type(1) .item_a_img {
+                width:90%; height:auto;
+                margin-top: 50px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="./script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+    <script> 
+        //좌표 값을 바꿔서 입력 35.998828, 129.382910
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(35.998828, 129.382910);
+            var mapOptions = {
+                zoom: 17,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'SH서울도시주택공사' // 레이블을 바꿔서 입력
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="popmenu_input" class="ck">
+    <ul id="contain">
+        <li id="pop" class="contain_lst">
+            <header id="pop_hd">
+                <a href="login_form.php" class="pop_login">로그인하기</a>
+            </header>
+            <ul id="pop_menu_wrap">
+                <li class="pop_menu">
+                    <a href="sub1.html" class="pop_menu_a">
+                        <img src="./img/ico3.png" alt="인터넷청약" class="pop_menu_a_img">
+                        <p class="pop_menu_a_p">인터넷청약</p>
+                    </a>
+                </li>
+                <li class="pop_menu">
+                    <a href="sub2.html" class="pop_menu_a">
+                        <img src="./img/ico4.png" alt="분양정보" class="pop_menu_a_img">
+                        <p class="pop_menu_a_p">분양정보</p>
+                    </a>
+                </li>
+                <li class="pop_menu">
+                    <a href="sub3.html" class="pop_menu_a">
+                        <img src="./img/ico8.png" alt="토지정보" class="pop_menu_a_img">
+                        <p class="pop_menu_a_p">토지정보</p>
+                    </a>
+                </li>
+                <li class="pop_menu">
+                    <a href="sub4.html" class="pop_menu_a">
+                        <img src="./img/ico7.png" alt="임대정보" class="pop_menu_a_img">
+                        <p class="pop_menu_a_p">임대정보</p>
+                    </a>
+                </li>
+                <li class="pop_menu">
+                    <a href="sub5.html" class="pop_menu_a">
+                        <img src="./img/ico1.png" alt="상가정보" class="pop_menu_a_img">
+                        <p class="pop_menu_a_p">상가정보</p>
+                    </a>
+                </li>
+            </ul>
+            <footer id="pop_ft">
+                <a href="tel:1600-3456" class="pop_phone">대표전화 1600-3456</a>
+            </footer>
+        </li>
+        <li id="main" class="contain_lst">
+            <header id="hd">
+                <label for="popmenu_input" class="popmenu_label"></label>
+                <a href="index.html" class="logo"></a>
+                <a href="index.html" class="home"></a>
+            </header>
+            <div id="content">
+                <ul class="item_wrap grid10-5">
+                    <li class="item">
+                        <a href="sub1.html" class="item_a">
+                            <p class="item_a_p">인터넷<br />청약</p>
+                            <img src="./img/ico3.png" alt="인터넷청약" class="item_a_img">
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="sub2.html" class="item_a">
+                            <p class="item_a_p">분양정보</p>
+                            <img src="./img/ico4.png" alt="분양정보" class="item_a_img">
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="sub3.html" class="item_a">
+                            <p class="item_a_p">토지정보</p>
+                            <img src="./img/ico8.png" alt="토지정보" class="item_a_img">
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="sub4.html" class="item_a">
+                            <p class="item_a_p">임대정보</p>
+                            <img src="./img/ico7.png" alt="임대정보" class="item_a_img">
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="sub5.html" class="item_a">
+                            <p class="item_a_p">상가정보</p>
+                            <img src="./img/ico1.png" alt="상가정보" class="item_a_img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <footer id="ft">
+                <ul id="fnb" class="grid10-5">
+                    <li class="fnb_li">
+                        <a href="contact.html" class="fnb_li_a">오시는길</a>
+                    </li>
+                    <li class="fnb_li">
+                        <a href="sub1.html" class="fnb_li_a">청약결과조회</a>
+                    </li>
+                </ul>
+                <a href="tel:1600-3456" class="phone">대표전화 1600-3456</a>
+                <ul class="sns_warp">
+                    <li class="sns sns_blog">
+                        <a href="https://blog.naver.com/together_sh" class="sns_a"></a>
+                    </li>
+                    <li class="sns sns_facebook">
+                        <a href="https://www.facebook.com/together.sh" class="sns_a"></a>
+                    </li>
+                    <li class="sns sns_twitter">
+                        <a href="https://twitter.com/together_sh" class="sns_a"></a>
+                    </li>
+                </ul>
+                <p class="copyrights">Seoul Housing &amp; Communities Corporation. All rights reserved.</p>
+            </footer>
+        </li>
+    </ul>
+    <!-- 구글지도 API
+    <section class="map_api" id="contact">
+        <h2 class="sec_mid_title">Contact US</h2>
+        <article class="full_col h600" style="margin-bottom:50px;">
+            <div id="map_canvas" style="width:100%; height:300px"></div>
+        </article>
+    </section>
+    -->
+</body>
+</html>

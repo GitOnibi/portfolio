@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* background-color */
+.RE-bg { background-color:#F44336; }
+.PI-bg { background-color:#E91E63; }
+.PP-bg { background-color:#9C27B0; }
+.DP-bg { background-color:#673AB7; }
+.IN-bg { background-color:#3F51B5; }
+.BL-bg { background-color:#2196F3; }
+.LB-bg { background-color:#03A9F4; }
+.CY-bg { background-color:#00BCD4; }
+.TE-bg { background-color:#009688; }
+.GR-bg { background-color:#4CAF50; }
+.LG-bg { background-color:#8BC34A; }
+.LI-bg { background-color:#CDDC39; }
+.YE-bg { background-color:#FFEB3B; }
+.AM-bg { background-color:#FFC107; }
+.OR-bg { background-color:#FF9800; }
+.DO-bg { background-color:#FF5722; }
+.BR-bg { background-color:#795548; }
+.GREY-bg { background-color:#9E9E9E; }
+.BG-bg { background-color:#607D8B; }
+.WH-bg { background-color:#fff; }
+.BK-bg { background-color:#000; }
+
+/* gradiant */
+.rgra1 { background: #cc0000; /* 붉은 그라디언트 */
+background: -moz-linear-gradient(top, #cc0000 0%, #af0000 100%); 
+background: -webkit-linear-gradient(top, #cc0000 0%,#af0000 100%); 
+background: linear-gradient(to bottom, #cc0000 0%,#af0000 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#af0000',GradientType=0 ); }
+ 
+.rgra2 { background: #f85032; 
+background: -moz-linear-gradient(top, #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); 
+background: -webkit-linear-gradient(top, #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); 
+background: linear-gradient(to bottom, #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); }
+ 
+.rgra3 { background: #ff3019; 
+background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); 
+background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%); 
+background: linear-gradient(to bottom, #ff3019 0%,#cf0404 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); }
+
+.vgra1 { background: #9865bf; /* 자주 그라디언트 */
+background: -moz-linear-gradient(top, #9865bf 0%, #4b2182 100%); 
+background: -webkit-linear-gradient(top, #9865bf 0%,#4b2182 100%); 
+background: linear-gradient(to bottom, #9865bf 0%,#4b2182 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9865bf', endColorstr='#4b2182',GradientType=0 ); }
+
+.vgra2 { background: #cb60b3; 
+background: -moz-linear-gradient(top, #cb60b3 0%, #c146a1 50%, #a80077 51%, #db36a4 100%); 
+background: -webkit-linear-gradient(top, #cb60b3 0%,#c146a1 50%,#a80077 51%,#db36a4 100%);
+background: linear-gradient(to bottom, #cb60b3 0%,#c146a1 50%,#a80077 51%,#db36a4 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#db36a4',GradientType=0 );  }
+
+.vgra3 { background: #cb60b3; 
+background: -moz-linear-gradient(top, #cb60b3 0%, #ad1283 50%, #de47ac 100%); 
+background: -webkit-linear-gradient(top, #cb60b3 0%,#ad1283 50%,#de47ac 100%);
+background: linear-gradient(to bottom, #cb60b3 0%,#ad1283 50%,#de47ac 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#de47ac',GradientType=0 ); }
+
+.pgra1 { background: #ff0084; /* 핑크 그라디언트 */
+background: -moz-linear-gradient(top, #ff0084 0%, #b7007d 100%); 
+background: -webkit-linear-gradient(top, #ff0084 0%,#b7007d 100%); 
+background: linear-gradient(to bottom, #ff0084 0%,#b7007d 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0084', endColorstr='#b7007d',GradientType=0 ); }
+
+.pgra2 { background: #fcecfc; 
+background: -moz-linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff7cd8 100%); 
+background: -webkit-linear-gradient(top, #fcecfc 0%,#fba6e1 50%,#fd89d7 51%,#ff7cd8 100%); 
+background: linear-gradient(to bottom, #fcecfc 0%,#fba6e1 50%,#fd89d7 51%,#ff7cd8 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff7cd8',GradientType=0 ); }
+
+.pgra3 { background: #ff0084; 
+background: -moz-linear-gradient(top, #ff0084 0%, #b7007d 51%, #b7007d 53%, #ff0084 100%, #ff0084 102%);
+background: -webkit-linear-gradient(top, #ff0084 0%,#b7007d 51%,#b7007d 53%,#ff0084 100%,#ff0084 102%);
+background: linear-gradient(to bottom, #ff0084 0%,#b7007d 51%,#b7007d 53%,#ff0084 100%,#ff0084 102%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0084', endColorstr='#ff0084',GradientType=0 ); }
+
+.cgra1 { background: #6db3f2; /* 하늘색 그라디언트 */
+background: -moz-linear-gradient(top, #6db3f2 0%, #1e69de 100%); 
+background: -webkit-linear-gradient(top, #6db3f2 0%,#1e69de 100%); 
+background: linear-gradient(to bottom, #6db3f2 0%,#1e69de 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 ); }
+
+.cgra2 { background: #6db3f2; 
+background: -moz-linear-gradient(top, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%); 
+background: -webkit-linear-gradient(top, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); 
+background: linear-gradient(to bottom, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 ); }
+
+.cgra3 { background: #73b1e7; 
+background: -moz-linear-gradient(top, #73b1e7 0%, #0a77d5 100%); 
+background: -webkit-linear-gradient(top, #73b1e7 0%,#0a77d5 100%); 
+background: linear-gradient(to bottom, #73b1e7 0%,#0a77d5 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73b1e7', endColorstr='#0a77d5',GradientType=0 ); }
+
+.lgra1 { background: #bff900; /* 라임 그라디언트 */
+background: -moz-linear-gradient(top, #bff900 1%, #8fc400 100%); 
+background: -webkit-linear-gradient(top, #bff900 1%,#8fc400 100%); 
+background: linear-gradient(to bottom, #bff900 1%,#8fc400 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bff900', endColorstr='#8fc400',GradientType=0 ); }
+
+.lgra2 { background: #9dd53a; 
+background: -moz-linear-gradient(top, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); 
+background: -webkit-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); 
+background: linear-gradient(to bottom, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); }
+
+.lgra3 { background: #9aff68; 
+background: -moz-linear-gradient(top, #9aff68 0%, #84ce2f 100%); 
+background: -webkit-linear-gradient(top, #9aff68 0%,#84ce2f 100%); 
+background: linear-gradient(to bottom, #9aff68 0%,#84ce2f 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9aff68', endColorstr='#84ce2f',GradientType=0 ); }
+
+.ygra1 { background: #ffd65e;   /* 노랑 그라디언트 */
+background: -moz-linear-gradient(top, #ffd65e 0%, #c68f03 100%); 
+background: -webkit-linear-gradient(top, #ffd65e 0%,#c68f03 100%); 
+background: linear-gradient(to bottom, #ffd65e 0%,#c68f03 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#c68f03',GradientType=0 ); }
+
+.ygra2 { background: #ffd65e; 
+background: -moz-linear-gradient(top, #ffd65e 0%, #fcc605 49%, #eda704 50%, #fcc605 100%); 
+background: -webkit-linear-gradient(top, #ffd65e 0%,#fcc605 49%,#eda704 50%,#fcc605 100%); 
+background: linear-gradient(to bottom, #ffd65e 0%,#fcc605 49%,#eda704 50%,#fcc605 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#fcc605',GradientType=0 ); }
+
+.ygra3 { background: #ffcd19; 
+background: -moz-linear-gradient(top, #ffcd19 0%, #d89e15 100%); 
+background: -webkit-linear-gradient(top, #ffcd19 0%,#d89e15 100%); 
+background: linear-gradient(to bottom, #ffcd19 0%,#d89e15 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcd19', endColorstr='#d89e15',GradientType=0 ); }
+
+.bkgra1 { background: #7d7e7d; /* 핑크 그라디언트 */
+background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); 
+background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%); 
+background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); }
+
+.bkgra2 { background: #4c4c4c; 
+background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); }
+
+.bkgra3 { background: #959595; 
+background: -moz-linear-gradient(top, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 54%, #7c7c7c 100%); 
+background: -webkit-linear-gradient(top, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 54%,#7c7c7c 100%); 
+background: linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 54%,#7c7c7c 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#7c7c7c',GradientType=0 ); }
+
+/* font-color */
+.RE-tx { color:#F44336; } /* red 빨강 */
+.PI-tx { color:#E91E63; } /* pink 분홍 */
+.PP-tx { color:#9C27B0; } /* puple 보라 */
+.DP-tx { color:#673AB7; } /* deep puple 진보라 */
+.IN-tx { color:#3F51B5; } /* indigo 남청 */
+.BL-tx { color:#2196F3; } /* blue 파랑 */
+.LB-tx { color:#03A9F4; } /* light blue 연파랑 */
+.CY-tx { color:#00BCD4; } /* cyan 사이안 */
+.TE-tx { color:#009688; } /* teal 청록 */
+.GR-tx { color:#4CAF50; } /* green 초록 */
+.LG-tx { color:#8BC34A; } /* light green 연두 */
+.LI-tx { color:#CDDC39; } /* lime 라임*/
+.YE-tx { color:#FFEB3B; } /* yellow 노랑 */
+.AM-tx { color:#FFC107; } /* amber 호박 진노랑 */
+.OR-tx { color:#FF9800; } /* orange 주황*/
+.DO-tx { color:#FF5722; } /* deep orange 진주황 */
+.BR-tx { color:#795548; } /* brown 갈색 */
+.GREY-tx { color:#9E9E9E; } /* grey 회색 */
+.BG-tx { color:#607D8B; } /* blye grey 회청색 */
+.WH-tx { color:#fff; } /* white 백색 */
+.BK-tx { color:#000; } /* black 검 */

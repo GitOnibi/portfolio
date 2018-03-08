@@ -1,0 +1,48 @@
+/* sub header */    
+    #hd img { display:block; margin:0 auto; width:100%; height:100px; }
+    @media screen and (min-width:420px) {
+        #hd img {
+            width:auto; height:100px;
+        }
+    }
+    #hd a.homebtn {
+        display:block;
+        width:30px; height:30px;
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-image:url(./img/homebtn.png);
+        position:absolute; left:5%; top:35px;
+    }
+    #hd label.menubtn {
+        display:block;
+        width:30px; height:30px;
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-image:url(./img/menubtn.png);
+        position:absolute; right:5%; top:35px;
+    }
+
+    ul.sub_collap {
+        clear:both;
+        height:100px;
+        background-color:#fff;
+        padding-top:10px;
+    }
+    ul.sub_collap li {
+        float:left;
+        height:30px;
+        background-color:#555;
+        border:2px solid #fff; box-sizing:border-box;
+        border-radius:5px;
+    }
+    ul.sub_collap li a {
+        display:block;
+        height:30px;
+        text-align:center; line-height:20px;
+        font-size:0.5em;
+        color:#fff;
+    }
+
+    input#sub_collap_ck:checked ~ #hd { min-height:200px; max-height:200px; }

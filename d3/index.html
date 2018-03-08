@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>tim burton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="common.css">
+    <style>
+        #visual { width:100%; height:100%; overflow:hidden; }
+        #visual img.mimg { width:1920px; height:auto; }
+        section.page {
+            width:100%; height:100%;
+            background-size:100% 100%;
+            background-repeat:no-repeat;
+            background-position::center center;
+        }
+        section.page1 { background-image:url(./images/leftbar25.png); }
+        section.page2 { background-image:url(./images/rightbar25.png); }
+        section.page3 { background-image:url(./images/leftbar25.png); }
+        section.page4 { background-image:url(./images/rightbar25.png); }
+        
+        ul.contentwrap {
+            width:1140px; height:100%;
+            margin:0 auto;
+        }
+        ul.contentwrap li { width:50%; height:100%; }
+        ul.contentwrap li.left { float:left; }
+        ul.contentwrap li.right { float:right; }       
+        ul.contentwrap1 li.left img { width:570px; height:760px; }
+        ul.contentwrap1 li.right img { width:570px; height:339px; }
+        p.p1rtitle {
+            width:570px; height:100px;
+            font-size:30px; font-weight:bold;
+            color:#fff;
+            line-height:1.5;
+            background-color:#000;
+        }
+    </style>
+    <link rel="stylesheet" href="ft.css">
+</head>
+<body>
+    <header id="hd">
+        <div class="tnbwrap">
+            <a href="index.html" class="logo">
+                <img src="./images/logo1.png" alt="">
+            </a>
+            <p class="hdtxt">12.12 - 04.14<br/>대전시립미술관 본관 2, 3층</p>
+            <ul class="tnb">
+                <li><a href="" class="tnbico fbicon"></a></li>
+                <li><a href="" class="tnbico twicon"></a></li>
+                <li><a href="" class="tnbico blicon"></a></li>
+            </ul>
+        </div>
+        <div class="hdline"></div>
+        <ul class="gnb">
+            <li><a href="sub1.html">전시소개</a></li>
+            <li><a href="sub2.html">작가소개</a></li>
+            <li><a href="">참가신청</a></li>
+            <li><a href="">관람안내</a></li>
+            <li><a href="">아트워크</a></li>
+            <li><a href="">갤러리</a></li>
+        </ul>
+    </header>
+    <figure id="visual">
+        <img src="./images/c06.png" alt="" class="mimg">
+    </figure>
+    <section class="page page1">
+        <ul class="contentwrap contentwrap1">
+            <li class="left"><a href="sub1.html"><img src="./images/ban01.jpg" alt=""></a></li>
+            <li class="right">
+                <p class="p1rtitle">그로테스크의 거장!<br/>팀버튼전으로 초대합니다.</p>
+                <div style="position:relative;height:0;padding-bottom:56.21%">
+                    <iframe src="https://www.youtube.com/embed/U5wiPiwTp4s?ecver=2" width="570" height="320" frameborder="0" gesture="media" allowfullscreen></iframe>
+                </div>
+                <img src="./images/m02.jpg" alt="">
+            </li>
+        </ul>
+    </section>
+    <section class="page page2">
+        <ul class="contentwrap contentwrap2">
+            <li class="left">
+                <img src="./images/ban02.png" alt="">
+            </li>
+            <li class="right">
+                <a href="sub2.html">
+                    <img src="./images/ban03.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section class="page page3">
+        <ul class="contentwrap contentwrap3">
+            <li class="left">
+                <a href="">
+                    <img src="./images/ban04.png" alt="">
+                </a>
+            </li>
+            <li class="right">
+                <img src="./images/ban05.jpg" alt="">
+            </li>
+        </ul>
+    </section>
+    <footer id="ft">
+        <ul class="ftitem">
+            <li class="ftlogo"><img src="./images/logo1.png" alt=""></li>
+            <li class="ftcomment">
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> 팀버튼전 관리사무소 02-2143-5832 | <i class="fa fa-envelope" aria-hidden="true"></i> hicuri@naver.com<br/>(C) RYU ALL RIGHTS RESERVED</p>
+            </li>
+            <li class="ftsite">
+                <a href="http://dope.dothome.co.kr/d1">| DOPE |</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

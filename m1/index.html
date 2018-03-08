@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <!-- subject=홈페이지 주제 -->
+    <meta name="subject" content="POSCO" />
+    <!-- title=홈페이지 이름 -->
+    <meta name="title" content="POSCO" />
+    <!-- author=홈페이지 제작자 -->
+    <meta name="author" content="RYU" />
+    <!-- keyword=홈페이지 키워드 -->
+    <meta name="keywords" content="POSCO 포스코 포항제철" />
+    <!-- description=홈페이지 설명문 -->
+    <meta name="description" content="포항제철의 새 이름 POSCO" />
+    <title>POSCO</title>
+    <script type="text/javascript" src="./hide.js"></script>
+    <style>
+
+    /* font */
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+        /* font-family: 'Noto Sans KR', sans-serif; */
+
+    /* normalize */    
+        * { margin:0; padding:0; }
+        html, body { width:100%; height:100%; }
+        a { text-decoration:none; }
+        ul { list-style:none; }
+        img { border:0; }
+        .ck { display:none; }
+
+    /* common */
+        #contain {
+            position:relative;
+            width:90%;
+            margin:0 auto;
+            overflow-x:hidden;
+        }
+        .line {
+            display:block;
+            clear:both;
+            width:50px; height:10px;
+            background:#333;
+            margin:0 auto;
+            border-radius:2px;
+            margin-top:10px;
+        }
+        [class*=_line] {
+            display:block;
+            height:3px;
+        }
+        .left_line {
+            float:left;
+            width:10%; 
+            background:#ccc;
+        }
+        .right_line {
+            float:right;
+            width:90%;
+            background:#777;
+        }
+
+    /* header */
+        #hd {
+            width:100%; height:75px;
+            margin:0 auto;
+            padding-top:20px;
+        }
+        a.logo {
+            display:block;
+            height:75px;
+            background-image:url(./img/logo.png);
+            background-size:auto 50px;
+            background-repeat:no-repeat;
+            background-position:left center;
+        }
+
+    /* content */
+        #content { width:100%; }
+        .page {
+            clear:both;
+            width:100%;
+            margin:0 auto;
+            margin-top:50px;
+        }
+        .page img.page_img {
+            display:block;
+            width:100%; height:auto;
+            margin-top:50px;
+        }
+        .sec_more {
+            display:block;
+            width:75%;
+            color:#555;
+            padding-top:20px; padding-bottom:20px;
+        }
+        .sec_more span {
+            font-size:50px; font-weight:bold;
+            text-shadow:3px 3px 0px rgba(0,0,0,0.2);
+        }
+        [class*=title] {
+            font-family:'Noto Sans KR', sans-serif;
+            font-weight:bold;
+            padding-top:20px;
+            padding-bottom:10px;
+        }
+        .sec_high_title {  }
+        .sec_mid_title {  }
+        .sec_mid_title::after {
+            content:" ";
+            display:block;
+            width:50px; height:3px;
+            background-color:#000;
+            margin-top:10px;
+        } 
+        .sec_low_title {  }
+        .sec_comment {
+            font-family:'Noto Sans KR', sans-serif;
+            color:#333;
+            line-height:2;
+            padding-top:20px;
+        }
+        .sec_comment2 { text-indent:10px; }
+
+    /* footer */
+        #ft .sns {
+            display:block;
+            float:left;
+            color:#555;
+            padding:20px 40px 40px 0px;
+        }
+
+    /* fixed menu */
+        .fixed_menu_label {
+            position:fixed; right:10px; top:10px;
+            z-index:200;
+            display:block;
+            width:70px; height:70px;
+            background:rgba(255,255,255,0.5);
+            text-align:center; line-height:75px;
+            font-size:50px; font-weight:bold;
+        }
+        #fixed_menu_wrap {
+            position:fixed; left:0; top:0;
+            z-index:100;
+            transition:0.5s;
+            width:100%; height:100%;
+            margin-top:-2000px;
+            background:rgba(0,0,0,0.8);
+        }
+        .fixed_menu {
+            width:calc(100% - 90px);
+            padding-top:50px; padding-bottom:50px;
+        }
+        .fixed_menu li {
+            text-align:center;
+        }
+        .fixed_menu li:nth-of-type(1)::before {
+            content:"";
+            display:block;
+            width:2px; height:50px;
+            background-color:rgba(255,255,255,0.3);
+            margin:0 auto;
+        }
+        .fixed_menu li::after {
+            content:"";
+            display:block;
+            width:2px; height:50px;
+            background-color:rgba(255,255,255,0.3);
+            margin:0 auto;
+        }
+        .fixed_menu li a {
+            font-size:1.5rem; font-weight:bold;
+            color:#fff;
+        }
+        .sns_wrap {
+            width:60%;
+            margin:0 auto;
+        }
+        .sns_wrap li.sns {
+            float:left;
+            width:33.33%; height:55px;
+        }
+        .sns_wrap li.sns a {
+            display:block;
+            width:40px; height:40px;
+            border-radius:25px;
+            margin:0 auto;
+            background-size:cover;
+            background-position:center;
+        }
+        .sns_wrap li.sns:nth-of-type(1) a { background-image:url(./img/family_sns_blog.gif); }
+        .sns_wrap li.sns:nth-of-type(2) a { background-image:url(./img/family_sns_facebook.gif); }
+        .sns_wrap li.sns:nth-of-type(3) a { background-image:url(./img/family_sns_twitter.gif); }
+        input#fixed_menu_input:checked ~ #fixed_menu_wrap { margin-top:0px; }
+
+    /* fixed contact */
+        .fixed_contact_label {
+            position:fixed; right:0px; top:50%;
+            z-index:200;
+            transform:translate(0%,-50%);
+            display:block;
+            width:70px; height:125px;
+            background:rgba(255,255,255,0.5);
+            text-align:center; line-height:50px;
+            font-size:60px; font-weight:bold;
+        }
+        #fixed_contact {
+            position:fixed; left:0; top:0;
+            z-index:100;
+            transition:0.5s;
+            width:100%; height:100%;
+            margin-left:2000px;
+            background:rgba(0,0,0,0.8);
+        }
+        .input_wrap {
+            width:calc(100% - 90px);
+            padding-top:100px;
+        }
+        .input_wrap input {
+            clear:both;
+            display:block;
+            width:200px; height:40px;
+            background-color:#eee;
+            border-radius:5px;
+            margin:0 auto;
+            margin-bottom:50px;
+            border:0; outline:0;
+            box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .input_wrap input[placeholder] {
+            font-size:0.9rem; font-weight:bold;
+            text-align:center;
+        }
+        .input_wrap button[type="submit"] {
+            display:block;
+            width:200px; height:60px;
+            border-radius:5px;
+            background-color:dodgerblue;
+            margin:0 auto;
+            border:0; outline:0;
+            font-size:1.2rem; font-weight:bold;
+            color:#fff; text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        input#fixed_contact_input:checked ~ #fixed_contact { margin-left:0px; }
+
+    /* 지도 API */
+        #map_canvas { margin-bottom:10px; }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+    <script> 
+        //좌표 값을 바꿔서 입력 35.998828, 129.382910
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(35.998828, 129.382910);
+            var mapOptions = {
+                zoom: 17,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: '포스코' // 레이블을 바꿔서 입력
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+ </script>
+</head>
+<body onload="initialize()">
+    <div id="contain">
+        <header id="hd">
+            <a href="index.html" class="logo"></a>
+        </header>
+        <div id="content">
+            <section class="page" id="page1">
+                <h2 class="sec_mid_title">Welcom to POSCO!</h2>
+                <p class="sec_comment sec_comment2">"포스코는 미래 성장의 강력한 의지를 담아 'POSCO the Great'라는 비전을 새롭게 선포하였습니다. 철을 기반으로 신성장 동력을 육성해 새로운 가치를 제공함으로써 세계인으로부터 존경받는 기업이 되겠습니다. 포스코는 'POSCO the Great'라는 비전 아래 좋은 제품과 서비스, 기업 시민의식과 이해관계자와의 소통을 바탕으로 이윤 이상의 가치를 창출하여 인류 사회의 공존과 번영에 기여하는 기업으로 나아가고자 합니다."</p>
+                <a href="sub1.html" class="sec_more">Discover POSCO<span> + </span></a>
+                <img src="./img/img_outline01.gif" alt="Welcom to POSCO!" class="page_img">
+            </section>
+            <section class="page" id="page2">
+                <h2 class="sec_mid_title">Great Challenger</h2>
+                <h1 class="sec_high_title">미래형 초우량 사업구조로<br />진화합니다</h1>
+                <p class="sec_comment sec_comment2">포스코는 철강에서 비철강으로, 제조에서 서비스로, 전통에서 미래로 사업영역을 확대하여 철강 중심의 사업구조에서 기존 사업과 신규 사업이 조화를 이루는 미래형 사업구조로 전환하고 있습니다. 철강·자원·소재·화학으로 이어지는 철강 밸류 체인을 확대하여 종합소재 메이커로서의 역량을 갖추고, E&amp;C · ICT · 무역 등 관련 서비스 사업의 기반을 확보하여 시장기회를 선점해 나아가고 있습니다. 또한 녹색성장사업, 물류·해운, 금융 등 미래 신수종산업에 적극 진출하여 미래형 비즈니스 포트폴리오를 완성해 나갈 것입니다.</p>
+                <a href="sub2.html" class="sec_more">Discover<span> + </span></a>
+                <img src="./img/img_outline02.gif" alt="Great Challenger" class="page_img">
+            </section>
+            <section class="page" id="page3">
+                <h2 class="sec_mid_title">Great Voyager</h2>
+                <h1 class="sec_high_title">활동 무대를<br />전 세계로 넓혀 갑니다</h1>
+                <p class="sec_comment sec_comment2">포스코는 진정한 글로벌 플레이어로 도약하기 위하여 고객과 시장, 기회와 미래가 있는 세계 어느 곳이든 활동 무대를 확대해 나갈 것입니다. 동유럽에서 아시아·극동에 이르는 유라시아 지역과 북미와 남미를 잇는 미주 지역에서 철강사업을 더욱 확대하여 글로벌 철강 리더십을 공고히 하고, 나아가 원료와 자원이 풍부한 아프리카와 시베리아, 남극, 북극 등 프런티어 영역을 개척하여 새로운 미래 경쟁력을 확보해 나갈 것입니다.</p>
+                <a href="sub3.html" class="sec_more">Discover<span> + </span></a>
+                <img src="./img/img_outline03.gif" alt="Great Voyager" class="page_img">
+            </section>
+            <section class="page" id="page4">
+                <h2 class="sec_mid_title">Great Workplace</h2>
+                <h1 class="sec_high_title">미래형<br />선진 패밀리 경영시스템을<br />구현합니다</h1>
+                <p class="sec_comment sec_comment2">포스코는 신뢰와 소통, 혁신과 시너지가 어우러진 초일류 패밀리 경영시스템을 확립해 가고 있습니다. 새로운 가치창출의 기반이 되는 ‘스마트 워크플레이스(Smart Workplace)’를 구현하고 있으며, 미래 성장 동력 확충을 위한 기술 발굴 시스템을 완비할 뿐만 아니라 고객의 성공을 이끄는 새로운 마케팅상을 실현하고 있습니다. 아울러 상호신뢰와 동반성장을 위한 나눔과 상생의 경영을 실천하고 있으며, 기업 시민으로서 사회적 책임을 성실히 수행하는 데 앞장서고 있습니다.</p>
+                <a href="sub4.html" class="sec_more">Discover<span> + </span></a>
+                <img src="./img/img_outline04.gif" alt="Great Workplace" class="page_img">
+            </section>
+            <section class="page" id="page5">
+                <h2 class="sec_mid_title">Great People</h2>
+                <h1 class="sec_high_title">회사와 직원<br />개개인의 성장을<br />동시에 추구합니다</h1>
+                <p class="sec_comment sec_comment2">포스코는 회사의 비전과 직원의 비전이 같은 곳을 향합니다. 직원 개인 비전인 ‘마이비전(My Vision)’을 수립·실행할 뿐만 아니라 사내 MBA · e-러닝 등 차별화된 평생교육 프로그램을 제공하고, 신뢰와 소통의 기업문화와 일과 삶이 조화되는 행복한 일터를 조성하여, 직원들이 주인의식과 창의력을 가진 지식 근로자로 성장하며 자신의 꿈을 실현할 수 있도록 적극적으로 지원하고 있습니다. 세계 무대에서 능력을 펼치고 회사와 함께 꿈을 이루는 인재들이 포스코의 새로운 내일을 열어 갈 것입니다.</p>
+                <a href="sub5.html" class="sec_more">Discover<span> + </span></a>
+                <img src="./img/img_outline05.jpg" alt="Great People" class="page_img">
+            </section>
+            <section class="page row" id="contact">
+                <h2 class="sec_mid_title">Contact US</h2>
+                <article class="full_col h600" style="margin-bottom:50px;">
+                    <div id="map_canvas" style="width:100%; height:300px"></div>
+                </article>
+            </section>
+            <section class="page" id="partners">
+                <h2 class="sec_mid_title">Partner</h2>
+                <h3 class="sec_low_title">Introduce our<br />greatest Partners &amp; Clients</h3>
+                <img src="./img/main_partners.jpg" alt="partners and clients" class="page_img">
+            </section>
+        </div>
+        <footer class="page" id="ft">
+            <h2 class="sec_mid_title">POSCO<br />THE STEEL INDUSTRY</h2>
+            <h3 class="sec_low_title">Adress</h3>
+            <span class="left_line"></span><span class="right_line"></span>
+            <p class="sec_comment">6261, Donghaean-ro<br />Nam-gu, Pohang-si<br />Gyeongsangbuk-do<br />Republic of Korea</p>
+            <p class="sec_comment copyright">© POSCO, All rights reserved.</p>
+            <h3 class="sec_low_title">Contact</h3>
+            <span class="left_line"></span><span class="right_line"></span>
+            <p class="sec_comment">hicuri@naver.com<br />Tel 010-4020-0394</p>
+            <h3 class="sec_low_title">Follow us</h3>
+            <span class="left_line"></span><span class="right_line"></span>
+            <a href="http://blog.posco.com/" class="sns blog">blog</a>
+            <a href="https://www.facebook.com/HELLOPOSCO/" class="sns facebook">facebook</a>
+            <a href="https://twitter.com/poscoict" class="sns twitter">twitter</a>
+        </footer>
+        <input type="checkbox" id="fixed_menu_input" class="ck" />
+        <label for="fixed_menu_input" class="fixed_menu_label">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+        <nav id="fixed_menu_wrap">
+            <ul class="fixed_menu">
+                <li>
+                    <a href="./index.html#page1">Introduce</a>
+                </li>
+                <li>
+                    <a href="./index.html#page2">Technology</a>
+                </li>
+                <li>
+                    <a href="./index.html#page3">Sustainability</a>
+                </li>
+                <li>
+                    <a href="./index.html#page4">Discover a talent</a>
+                </li>
+                <li>
+                    <a href="./index.html#page5">Contact us</a>
+                </li>
+            </ul>
+            <ul class="sns_wrap">
+                <li class="sns blog">
+                    <a href="http://blog.posco.com/"></a>
+                </li>
+                <li class="sns facebook">
+                    <a href="https://ko-kr.facebook.com/HELLOPOSCO/"></a>
+                </li>
+                <li class="sns twitter">
+                    <a href="https://twitter.com/poscoict"></a>
+                </li>
+            </ul>
+        </nav>
+        <input type="checkbox" id="fixed_contact_input" class="ck" />
+        <label for="fixed_contact_input" class="fixed_contact_label">
+            c
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+        <nav id="fixed_contact">
+            <div class="input_wrap">
+                <input type="text" id="user_commpany" placeholder="Commpany">
+                <input type="text" id="user_name" placeholder="Your name">
+                <input type="text" id="user_phone" placeholder="Phone">
+                <input type="text" id="user_email" placeholder="E-mail">
+                <button type="submit" id="user_submit">SEND</button>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

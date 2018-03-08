@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ONIQLO</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="subhd.css">
+    <style>
+        #contentwrap { width:1080px; height:100%; margin:0 auto; margin-top:140px; }
+        .nav { position:fixed; top:140px; left:213px; width:200px; height:100%; }
+        .nav li { margin-bottom:40px; font-weight:bold; }
+        .nav li:nth-of-type(1) { font-size:2em; }
+        .content { float:right; width:100%; }
+        .content div.textwrap { margin-bottom:100px; }
+        .content img { width:100%; height:auto; margin-bottom:20px; }
+        .content h1.brand {
+            width:100%; height:60px;
+            background-color:#000; color:#fff;
+            text-indent:20px; line-height:60px;
+            margin-bottom:40px;
+        }
+        p.comment { line-height:30px; }
+        p.comment2 strong { font-size:1.2em; }
+/* google API */       
+        #map_canvas { margin-bottom:40px; }
+        #contact p {
+            text-align:left; line-height:30px; margin-top:25px; padding-left:30px; padding-right:25px; }
+/* google API end */ 
+    </style> 
+<!-- google API -->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+    <script> 
+        //좌표 값을 바꿔서 입력 36.3491563,127.3776857
+        function initialize() {
+          var myLatlng = new google.maps.LatLng(36.3491563,127.3776857);
+          var mapOptions = {
+            zoom: 17,
+            center: myLatlng
+          }
+          var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+          var marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+              title: '그린컴퓨터아트학원'	  //레이블을 바꿔서 입력
+          });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+<!-- google API end -->
+    <link rel="stylesheet" href="ft.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header id="hd">
+            <ul class="lmenu">
+                <li><a href="sub1.html">ONICLO?</a></li>
+                <li><a href="sub2.html">WOMEN</a></li>
+                <li><a href="sub3.html">MEN</a></li>
+                <li><a href="sub4.html">KISDS</a></li>
+                <li><a href="sub5.html">BABY</a></li>
+            </ul>
+            <a href="index.html" class="tlogo"></a>
+            <ul class="rmenu">
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="sitmap.html">사이트맵</a></li>
+                <li><a href="sub1.html#brand3">Contact US</a></li>
+            </ul>
+        </header>
+        <section id="contentwrap">
+            <ul class="nav">
+                <li>ONIQLO?</li>
+                <li><a href="#brand1">브랜드이야기</a></li>
+                <li><a href="#brand2">경영방침</a></li>
+                <li><a href="#brand3">매장위치</a></li>
+            </ul>
+            <div class="content">
+                <div class="textwrap textwrap1">
+                    <h1 id="brand1" class="brand">브랜드이야기</h1>
+                    <img src="./images/f1.jpg" alt="오니클로 패션워크 피날레 사진">
+                    <p class="comment comment1">
+                    &nbsp; &nbsp; 오니클로는 현재 한국을 비롯해 일본, 호주, 벨기에, 캐나다, 중국, 프랑스, 독일, 홍콩, 인도네시아, 말레이시아, 필리핀, 러시아, 싱가포르, 스페인, 대만, 태국, 영국, 미국 등 전세계 19개국에 진출, 약 1,900여개의 매장을 운영하고 있습니다. 모기업인 패스트 리테일링 그룹은 ‘옷을 바꾸고, 상식을 바꾸고, 세계를 바꾼다’는 기업 철학 아래 모든 사람들의 삶을 풍요롭게 만드는 새롭고 특별한 가치를 지닌 옷을 만들기 위해 노력하고 있습니다. 오니클로의 한국 내 사업을 운영하고 있는 에프알엘코리아㈜는 지난 2005년 서울에 첫 매장을 오픈한 이래 지속적으로 출점하여, 2017년 9월 현재 전국에 180여 개의 매장을 운영하면서 고객과의 접점을 늘려나가고 있습니다. 또한 우수 인재를 육성하여 개인과 회사의 성장을 동시에 실현하고, 이 외에도 채용의 확대와 사회 취약 계층의 고용에도 지속적으로 힘쓰고 있습니다. 또한 상품 및 판매 수익금을 통한 사회 공헌 실현 및 지역 사회와의 상생을 추구합니다. 오니클로는 누구나 언제 어디서든 입을 수 있는 고품질의 의류를 가장 합리적인 가격에 제공하고, 최고의 고객서비스를 실현할 수 있도록 항상 노력하겠습니다.
+                    </p>
+                </div>
+                <div class="textwrap textwrap2">
+                    <h1 id="brand2" class="brand">경영방침</h1>
+                    <img src="./images/f2.jpg" alt="각국 대표 매장의 점주들 사진">
+                    <p class="comment comment2">
+                        <strong>옷을 바꾸고, 상식을 바꾸고, 세계를 바꿔 나간다.<br/>FAST RETAILING WAY</strong>
+                        <br/><br/>
+                        <strong>스테이트먼트 – Statement<br/>옷을 바꾸고, 의식을 바꾸고, 세계를 바꿔 나간다.</strong>
+                        <br/><br/>
+                        <strong>Fast Retailing Group의 사명 – Mission<br/>Fast Retailing Group은-<br/></strong>
+                        &nbsp; &nbsp; 정말 좋은 옷, 이제까지 찾아볼 수 없었던 새로운 가치를 지닌 옷을 만들어 전 세계의 모든 이들에게 좋은 옷을 입을 수 있는 기쁨과 행복,<br/>
+                        &nbsp; &nbsp; 그리고 만족감을 제공합니다. 독자적인 기업 활동을 통해 사람들이 충실한 삶을 실현하는 데 공헌하고, 사회와 조화로운 발전을 추구합니다.
+                        <br/><br/>
+                        <strong>우리의 가치관 - Value</strong>
+                        <br/>
+                        &nbsp; &nbsp; 고객의 입장에 입각<br/>
+                        &nbsp; &nbsp; 혁신과 도전<br/>
+                        &nbsp; &nbsp; 개성의 존중, 회사와 개인의 성장<br/>
+                        &nbsp; &nbsp; 정의를 향한 집념<br/>
+                        <br/>
+                        <strong>나의 행동규범 - Principle</strong>
+                        <br/>
+                        &nbsp; &nbsp; 고객을 위한 다양한 활동을 합니다.<br/>
+                        &nbsp; &nbsp; 탁월함을 추구해 최고 수준을 지향합니다.<br/>
+                        &nbsp; &nbsp; 다양성을 살린 팀워크로 높은 성과를 실현합니다.<br/>
+                        &nbsp; &nbsp; 모든 일을 신속하게 실행합니다.<br/>
+                        &nbsp; &nbsp; 현장·상품·현실에 입각해 리얼한 비즈니스 활동을 전개합니다.<br/>
+                        &nbsp; &nbsp; 높은 윤리관을 지닌 세계 시민으로 행동합니다.
+                    </p>
+                </div>
+                <div class="textwrap textwrap3">
+                    <h1 id="brand3" class="brand">CONTACT</h1>
+                    <section class="row" id="contact">
+                        <article class="full_col h600" style="margin-bottom:50px;">
+                        <div id="map_canvas" style="width:1080px; height:600px"></div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <footer id="ft">
+            <ul class="fnb">
+                <li class="flogo"><a href="index.html"></a></li>
+                <li><a href="sub1.html">ONIQLO?</a></li>
+                <li><a href="sub2.html">WOMEN</a></li>
+                <li><a href="sub3.html">MEN</a></li>
+                <li><a href="sub4.html">KISDS</a></li>
+                <li><a href="sub5.html">BABY</a></li>
+                <li><a href="sub6.html">ITEMS</a></li>
+            </ul>
+            <ul class="sns">
+                <li><a href="https://ko-kr.facebook.com/uniqlo.kr/" target="_blank" ></a></li>
+                <li><a href="https://twitter.com/hashtag/%EC%9C%A0%EB%8B%88%ED%81%B4%EB%A1%9C" target="_blank"></a></li>
+                <li><a href="http://blog.eland.co.kr/" target="_blank"></a></li>
+                <li><a href="https://pf.kakao.com/_ytpmR" target="_blank"></a></li>
+            </ul>
+            <p class="copy">Copyrights &copy; 2017 ONIQLO all right reserved</p>
+        </footer>
+    </div>
+</body>
+</html>

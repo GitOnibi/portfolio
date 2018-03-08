@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <!-- subject=홈페이지 주제 -->
+    <meta name="subject" content="홈페이지 주제" />
+    <!-- title=홈페이지 이름 -->
+    <meta name="title" content="홈페이지 이름" />
+    <!-- author=홈페이지 제작자 -->
+    <meta name="author" content="RYU" />
+    <!-- keyword=홈페이지 키워드 -->
+    <meta name="keywords" content="검색어 연관검색어 비슷한검색어" />
+    <!-- description=홈페이지 설명문 -->
+    <meta name="description" content="사이트가 검색되었을때 보여질 설명" />
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <title>RYU</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    <script src="./js/html5shiv.js"></script>
+    <script src="./js/hidesearch.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+    <style>
+    /*
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+        font-family: 'Dosis', sans-serif;
+        
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+        font-family: 'Noto Serif', serif;
+        
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        font-family: 'Lobster', cursive;
+        
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+        font-family: 'Ubuntu Condensed', sans-serif;
+    */
+/* ----- common ----- */
+        ::-webkit-scrollbar { display:none; }
+        #wrap {
+            position:relative;
+            width:100%; height:100%;
+        }
+        .left {
+            float:left;
+        }
+        .right {
+            float:right;
+        }
+/* ----- header ----- */
+        #hd {
+            position:fixed; left:0; top:0;
+            z-index:100;
+            clear:both;
+            width:100%;
+        }
+        #hd label {
+            position:relative;
+            overflow:hidden;
+            float:left;
+            display:block;
+            width:20%;
+            font-family: 'Dosis', sans-serif;
+            font-size:1.1vw; font-weight:bold;
+            text-align:center; line-height:50px;
+            transition:1s;
+        }
+        .laLine {
+            transition:0.5s;
+            position:absolute; left:-30%; bottom:5px;
+            display:block;
+            width:25%; height:2px;
+            background-color:#000;
+        }
+        #hd label:hover .laLine {
+            left:37.5%;
+        }
+/* ----- section ----- */
+    /* section_common */
+        .section {
+            clear:both;
+            position:relative;
+            width:100%; height:100%;
+            box-sizing:border-box;
+            background-position:center;
+            background-attachment:fixed;
+            background-repeat:no-repeat;
+            padding-top:100px;
+        }
+        .secHd {
+            position:absolute; left:0; top:0;
+            width:100%; height:120px;
+            box-sizing:border-box;
+            background-position:center;
+            background-attachment:fixed;
+            background-repeat:no-repeat;
+        }
+        .secTitle {
+            font-family: 'Dosis', sans-serif;
+            font-size:1.8vw; font-weight:bold;
+            color:#fff;
+            text-align:center; line-height:5;
+            text-shadow:2px 2px 4px rgba(0,0,0,0.5);
+        }
+    /* section1 Intro */
+        .section:nth-of-type(1) {
+            background-image:url(./src/mainvisual.jpg);
+            background-size:cover;
+        }
+        /* eft */
+        .eft-wrap {
+            width:60%; height:20%;
+            margin:0 auto;
+        }
+    /* section2 Design methode */
+        .section:nth-of-type(2) {
+            
+        }
+        .section:nth-of-type(2) .secHd {
+            z-index:20;
+            background-image:url(./src/ux4.jpg);
+        }
+        .meth {
+            width:70%; height:100%;
+            margin:0 auto;
+            margin-top:40px;
+        }
+        .workWrap {
+            width:100%; height:100%;
+            box-sizing:border-box;
+        }
+        .work {
+            width:100%; height:33.33%;
+            padding:1%;
+            box-sizing:border-box;
+        }
+        .workImg {
+            transition:1s;
+            display:block;
+            width:20%; height:auto;
+        }
+        .workImg:hover {
+            transform:scale(1.1);
+        }
+        .workTxtWrap {
+            width:75%;
+        }
+        .workTitle {
+            font-size:1.6vw; font-weight:bold;
+            padding-left:2%;
+        }
+        .workTitle:after {
+            content:""; display:block;
+            width:100%; height:2px;
+            background-color:#777;
+            margin-top:5px;
+        }
+        .workTitle span {
+            color:#777;
+        }
+        .workCmt {
+            font-size:1.1vw;
+            line-height:2;
+            padding-left:2%; padding-top:1%;
+        }
+        .toolsWrap {
+            width:100%;
+            padding-left:1%;
+        }
+        .tools {
+            float:left;
+            width:50%;
+        }
+        .skillCmt {
+            clear:both;
+            font-size:0.5vw; font-weight:bold;
+            line-height:1.5;
+            padding-left:2%; padding-top:1%;
+            color:#777;
+        }
+        .skillWrap {
+            width:100%;
+            padding:2%;
+        }
+        .skillWrap li {
+            float:left;
+            padding-right:10px;
+        }
+        .skillWrap li img {
+            transition:1s;
+            display:block;
+            width:auto; height:15px;
+        }
+        .skillWrap li img:hover {
+            transform:scale(2);
+        }
+    /* section3 */
+        .section:nth-of-type(3) {
+            
+        }
+        .conWrap {
+            clear:both;
+            height:100%;
+        }
+        .con {
+            position:relative;
+            float:left;
+            width:100%; height:100%;
+        }
+        .inner {
+            position:absolute; left:50%; top:35%;
+            z-index:10;
+            transform:translate(-50%,-50%);
+            width:50%; height:50%;
+            
+            transition:5s;
+            background-size:auto 110%;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+        .inner_a {
+            position:relative;
+            overflow:hidden;
+            display:block;
+            width:100%; height:100%;
+            
+            transition:3s;
+            border-width:0px;
+            border-style:solid;
+            border-color:#fff;
+            box-sizing:border-box;
+        }
+        .txtWrap {
+            position:absolute; left:0; top:0;
+            z-index:12;
+            width:100%; height:100%;
+        }
+        .txTitle {
+            position:absolute; left:0; top:50%;
+            transform:translate(0,-50%);
+            width:100%;
+            font-family: 'Noto Serif', serif;
+            font-size:3vw; font-weight:bold;
+            text-align:center;
+            color:#fff;
+            text-shadow:3px 3px 6px rgba(0,0,0,1);
+            transition:10s;
+        }
+        .subBox {
+            position:absolute; left:50%; bottom:10%;
+            z-index:13;
+            transform:translate(-50%,0);
+            width:70%; height:15%;
+            background-color:rgba(0,0,0,0.2);
+        }
+        .sLabelWrap {
+            transition:1s;
+            position:absolute; left:50%; bottom:3%;
+            z-index:14;
+            transform:translate(-50%,0);
+        }
+        .sLabelWrap label {
+            transition:0.5s;
+            float:left;
+            display:block;
+            width:20px; height:20px;
+            border-radius:15px;
+            background-color:#777;
+            font-family:Arial; font-size: 15px;
+            font-size:0.7vw; font-weight: bold;
+            text-align:center; line-height:20px;
+            color:#ccc;
+            box-sizing:border-box;
+            margin-left:10px; margin-right:10px;
+            cursor:pointer;
+        }
+        .sLabelWrap label.act {
+            background-color:#333;
+            color:#fff;
+            transform:scale(1.5,1.5);
+        }
+    /* section4 Poltfolio */
+        .section:nth-of-type(4) {
+            
+        }
+        .section:nth-of-type(4) .secHd {
+            z-index:21;
+            background-image:url(./src/poltfolioBG.jpg);
+        }
+    /* section5 Ability */
+        .section:nth-of-type(5) {
+            
+        }
+        .section:nth-of-type(5) .secHd {
+            z-index:22;
+            background-image:url(./src/abilityBG.jpg);
+        }
+        .abilityWrap {
+            position:relative;
+            width:70%; height:100%;
+            margin:0 auto;
+            background-color:#fff;
+            box-sizing:border-box;
+            padding-top:40px;
+        }
+        .abWrap1 {
+            float:left;
+            width:50%;
+        }
+        .abTitle {
+            font-family: 'Ubuntu Condensed', sans-serif;
+            font-size:1.5vw; font-weight:bold;
+            text-align:center; line-height:2;
+        }
+        .abInner {
+            clear:both;
+            width:100%; height:150px;
+            box-sizing:border-box;
+        }
+        .abLabel {
+            position:relative;
+            float:left;
+            display:block;
+            width:100px; height:100px;
+            background-color:transparent;
+            border:5px solid #fff;
+            box-shadow:0px 0px 15px rgba(0,0,0,0.3);
+            border-radius:100px;
+            overflow:hidden;
+        }
+        .laTxt {
+            position:absolute; left:50%; top:50%;
+            z-index:31;
+            transform:translate(-50%,-50%);
+            font-family: 'Ubuntu Condensed', sans-serif;
+            font-size:1vw; font-weight:bold;
+            text-align:center;
+        }
+        .laTxt strong {
+            font-size:1.5vw;
+        }
+        .laBg {
+            transition:2s;
+            position:absolute; left:0; top:100%;
+            z-index:30;
+            width:100%; height:100%;
+            border-radius:100px;
+        }
+        .abLabel1 .laBg {
+            /* Old browsers */
+            background: #ff3019;
+            /* FF3.6-15 */
+            background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background: linear-gradient(to bottom, #ff3019 0%,#cf0404 100%);
+            /* IE6-9 */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 );
+        }
+        .abLabel2 .laBg {
+            /* Old browsers */
+            background: #00b7ea;
+            /* FF3.6-15 */
+            background: -moz-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: -webkit-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background: linear-gradient(to bottom, #00b7ea 0%,#009ec3 100%);
+            /* IE6-9 */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
+        }
+        .abLabel3 .laBg {
+            /* Old browsers */
+            background: #ffb76b;
+            /* FF3.6-15 */
+            background: -moz-linear-gradient(top, #ffb76b 0%, #ff7f04 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: -webkit-linear-gradient(top, #ffb76b 0%,#ff7f04 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background: linear-gradient(to bottom, #ffb76b 0%,#ff7f04 100%);
+            /* IE6-9 */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 );
+        }
+        .abLabel4 .laBg {
+            /* Old browsers */
+            background: #7db9e8;
+            /* FF3.6-15 */
+            background: -moz-linear-gradient(-45deg, #7db9e8 0%, #207cca 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: -webkit-linear-gradient(-45deg, #7db9e8 0%,#207cca 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background: linear-gradient(135deg, #7db9e8 0%,#207cca 100%);
+            /* IE6-9 fallback on horizontal gradient */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#207cca',GradientType=1 );
+        }
+        .abLabel5 .laBg {
+            /* Old browsers */
+            background: #ffb76b;
+            /* FF3.6-15 */
+            background: -moz-linear-gradient(-45deg, #ffb76b 0%, #ff7c00 51%, #ff7f04 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: -webkit-linear-gradient(-45deg, #ffb76b 0%,#ff7c00 51%,#ff7f04 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background: linear-gradient(135deg, #ffb76b 0%,#ff7c00 51%,#ff7f04 100%);
+            /* IE6-9 fallback on horizontal gradient */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=1 );
+        }
+        .abLabel6 .laBg {
+            /* Old browsers */
+            background: #ff5db1;
+            /* FF3.6-15 */
+            background: -moz-linear-gradient(-45deg, #ff5db1 0%, #ef017c 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: -webkit-linear-gradient(-45deg, #ff5db1 0%,#ef017c 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background: linear-gradient(135deg, #ff5db1 0%,#ef017c 100%);
+            /* IE6-9 fallback on horizontal gradient */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#ef017c',GradientType=1 );
+        }
+        .abCmt {
+            padding:20px;
+            float:right;
+            width:70%;
+            font-size:1vw;
+        }
+        .abWrap2 {
+            clear:both;
+            width:100%;
+        }
+        .abWrap2 img {
+            float:left;
+            display:block;
+            width:auto; height:15px;
+            margin-right:25px;
+            margin-bottom:20px;
+        }
+    /* section6 Contact */
+        .section:nth-of-type(6) {
+            background-color:#efefef;
+        }
+        .section:nth-of-type(6) .secHd {
+            z-index:23;
+            background-image:url(./src/contactBG.jpg);
+        }
+        .contactWrap {
+            width:100%; height:100%;
+        }
+        .myIntro {
+            position:relative;
+            width:70%; height:100%;
+            margin:0 auto;
+            background-color:#fff;
+            box-sizing:border-box;
+            box-shadow:0px 0px 15px rgba(0,0,0,0.7);
+            background-image:url(./src/contact_us.jpg);
+            background-size:cover;
+        }
+        .myName {
+            font-family: 'Dosis', sans-serif;
+            font-size:2vw; font-weight:bold;
+            text-align:center; line-height:2;
+            text-shadow:0px 0px 15px rgba(0,0,0,0.7);
+            color:#fff;
+            margin:0 auto;
+            padding-top:50px;
+        }
+        .myName:after {
+            content:"";
+            display:block;
+            width:10%; height:2px;
+            border-radius:5px;
+            background-color:#999;
+            margin:0 auto;
+        }
+        .inIconWrap {
+            width:60%;
+            margin:0 auto;
+        }
+        .inIcon {
+            float:left;
+            width:20%;
+            padding-top:30px; padding-bottom:60px;
+        }
+        .inIconWrap img {
+            display:block;
+            width:50%; height:auto;
+            margin:0 auto;
+        }
+        .inTitle {
+            font-family: 'Dosis', sans-serif;
+            font-size:1.8vw; font-weight:lighter;
+            text-align:center; line-height:2;
+            color:orange;
+        }
+        .inComment {
+            font-family: 'Dosis', sans-serif;
+            font-size:0.8vw;
+            text-align:center; line-height:1.5;
+            color:#fff;
+            letter-spacing:1px;
+        }
+        #map_canvas {
+            clear:both;
+            width:60%;
+            height:40%;
+            margin:0 auto;
+        }
+/* ----- media query ----- */
+        @media screen and (max-width:440px) {
+        /* section 5 */
+            .inIconWrap {
+                width:100%;
+            }
+            .inIcon {
+                clear:both;
+                width:100%;
+                padding:15px;
+            }
+            .inIconWrap img {
+                display:block;
+                width:100%; height:auto;
+            }
+            #map_canvas {
+                clear:both;
+                width:80%;
+                height:30%;
+            }
+        }
+        @media screen and (max-width:767px) { /* mobile */
+        /* html, body */
+            html, body {
+                font-size:10px;
+            }
+        /* header */
+            #hd {
+                height:30px; overflow:hidden;
+            }
+            #hd label {
+                font-size:0.8vw; line-height:30px;
+            }
+            .laLine {
+                display:none;
+            }  
+        /* section */
+            .section {
+                padding-top:30px;
+            }
+            .secHd {
+                height:30px;
+            }
+            .secTitle {
+                display:none;
+            }
+        /* section 2 */
+            .workImg {
+                
+            }
+            .workTxtWrap {
+                
+            }
+        /* section 3 */
+            .txTitle {
+                font-size:1.5vw;
+            }
+            .sLabelWrap label {
+                width:10px; height:10px;
+                font-size: 0px;
+                margin-left:2px; margin-right:2px;
+            }
+        /* section 5 */
+            .inIconWrap {
+                width:80%;
+            }
+            .inIcon {
+                float:left;
+                width:50%;
+            }
+            .inIconWrap img {
+                display:block;
+                width:25%; height:auto;
+                margin:0 auto;
+            }
+            .abInner {
+                width:100%; height:200px;
+            }
+            .abLabel {
+                float:none;
+                margin:0 auto;
+            }
+            .abCmt {
+                clear:both;
+                width:90%;
+                margin:0 auto;
+            }
+            .abWrap2 {
+                display:none;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:959px) { /* tablet */
+        /* html, body */
+            html, body {
+                font-size:12px;
+            }
+        /* header */
+            #hd label {
+                font-size:1.1vw; line-height:30px;
+            }
+            .laLine {
+                display:none;
+            }
+        /* section */
+            .section {
+                padding-top:100px;
+            }
+            .secHd {
+                height:100px;
+            }
+            .secTitle {
+                font-size:2vw;
+            }
+        /* section 2 */
+            .workImg {
+                
+            }
+            .workTxtWrap {
+                
+            }
+        /* section 3 */
+            .txTitle {
+                font-size:2vw;
+            }
+            .sLabelWrap label {
+                width:10px; height:10px;
+                font-size: 0px;
+                margin-left:1px; margin-right:1px;
+            }
+        /* section 5 */
+            .inIconWrap {
+                width:80%;
+            }
+            .inIcon {
+                float:left;
+                width:50%;
+            }
+            .inIconWrap img {
+                display:block;
+                width:25%; height:auto;
+                margin:0 auto;
+            }
+            .abInner {
+                width:100%; height:200px;
+            }
+            .abLabel {
+                float:none;
+                margin:0 auto;
+            }
+            .abCmt {
+                clear:both;
+                width:90%;
+                margin:0 auto;
+            }
+            .abWrap2 {
+                display:none;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+                
+        // page scrolling
+            var winHt = $(window).height();
+            var winWd = $(window).width();
+            $(".section").each(function(index) {
+                $(this).attr("data-index", winHt * index);
+            });
+            $(".section").on("mousewheel", function(event) {
+                var position = parseInt($(this).attr("data-index"));
+                if(event.originalEvent.wheelDelta >= 0) {
+                    $("body, html").not(":animated").animate({
+                        scrollTop : position - winHt
+                    }, 500);
+                } else {
+                    $("body, html").not(":animated").animate({
+                        scrollTop : position + winHt
+                    }, 500);
+                }
+            });
+        // -end
+                
+                
+        // contents basic size setting
+            var conLength = $(".con").length;
+            var conWd = 100 / conLength;
+            $(".conWrap").css("width", conLength * 100 + "%");
+            $(".con").css("width", conWd + "%");
+            $(window).resize(function() {
+                var conLength = $(".con").length;
+                var conWd = 100 / conLength;
+                $(".conWrap").css("width", conLength * 100 + "%");
+                $(".con").css("width", conWd + "%");
+            });
+        // -end    
+                
+                
+        // nav bar
+            $("#hd label").click(function() {
+                var pos = parseInt($(this).attr("data-index"));
+                if(pos >= 2) {
+                    $("body, html").not(":animated").animate({
+                        scrollTop : (pos + 1) * winHt
+                    }, 500);
+                } else {
+                    $("body, html").not(":animated").animate({
+                        scrollTop : pos * winHt
+                    }, 500);
+                }
+            });
+        // -end
+                
+                
+        // slide button setting
+            for(var i = 1; i < conLength + 1; i++) {
+                $(".sLabelWrap").append("<label data-con='" + (i - 1) + "'>" + i + "</label")
+            }
+            var conWd = $(".con").width();
+            var laWd = $(".sLabelWrap label").width();
+            if(winWd < 767) {
+                $(".sLabelWrap").css({
+                    "width" : conLength * (laWd+5) + "px"
+                });
+            } else {
+                $(".sLabelWrap").css({
+                    "width" : conLength * (laWd+20) + "px"
+                });
+            }
+            $(".sLabelWrap label").eq(0).addClass("act");
+            $(".sLabelWrap label").click(function() {
+                var dataCon = $(this).attr("data-con");
+                $(this).addClass("act");
+                $(this).siblings().removeClass("act");
+                $(".conWrap").animate({"margin-left" : -1 * dataCon * conWd + "px"});
+            });
+            $(".sLabelWrap label").mouseover(function() {
+                $(this).css({"opacity" : 0.8});
+            });
+            $(".sLabelWrap label").mouseout(function() {
+                $(this).css({"opacity" : 1});
+            });
+        // -end
+                
+                
+        // inner hover event    
+            $(".inner").mouseover(function() {
+                $(this).find(".inner_a").css({
+                    "border-width" : 30 + "px"
+                });
+                $(this).css({
+                    "background-size" : "auto 150%"
+                });
+                $(this).find(".txTitle").css({
+                    "transform" : "scale(0.7)"
+                });
+            });
+            $(".inner").mouseout(function() {
+                $(this).find(".inner_a").css({
+                    "border-width" : 0 + "px"
+                });
+                $(this).css({
+                    "border-width" : 0 + "px",
+                    "background-size" : "auto 110%"
+                });
+                $(this).find(".txTitle").css({
+                    "transform" : "scale(1)"
+                });
+            });
+        // -end
+                
+                
+        // section hover
+            $(".section").eq(3).mouseenter(function() {
+                $(".sLabelWrap").css({"opacity" : 1});
+            });
+            $(".section").eq(3).mouseleave(function() {
+                $(".sLabelWrap").css({"opacity" : 0});
+            });
+        // -end
+               
+                
+        // window scroll effect    
+            $(window).scroll(function() {
+                var winSc = $(window).scrollTop();
+                var winHt = $(window).height();
+                if(winSc > 1) {
+                    $("#hd label").css({"color" : "#fff", "text-shadow" : "2px 2px 4px rgba(0,0,0,0.5)"});
+                    $("#hd label span").css({"background-color" : "#fff", "box-shadow" : "2px 2px 4px rgba(0,0,0,0.5)"});
+                } else {
+                    $("#hd label").css({"color" : "#000", "text-shadow" : "none"});
+                    $("#hd label span").css({"background-color" : "#000", "box-shadow" : "none"});
+                }
+                
+                // section2 secHd fixed
+                if(winSc > winHt-1 && winSc < (winHt*3)-1) {
+                    $(".section:eq(1)").find(".secHd").css({
+                        "position" : "fixed",
+                        "left" : 0,
+                        "top" : 0
+                    });
+                } else {
+                    $(".section:eq(1)").find(".secHd").css({
+                        "position" : "absolute",
+                        "left" : 0,
+                        "top" : 0
+                    });
+                }
+                // -end
+                    
+                    
+                // section5 animate
+                if(winSc == winHt*4) {
+                    $(".laBg").css({"top" : 0});
+                    $(".laBg7").css({"top" : "30%"});
+                    $(".laBg6").css({"top" : "40%"});
+                } else {
+                    $(".laBg").css({
+                        "top" : "100%"
+                    });
+                }
+                // -end
+            });
+        // -end
+        });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript"> 
+        //좌표 값을 바꿔서 입력 35.998828, 129.382910
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(36.339517, 127.340338);
+            var mapOptions = {
+                zoom: 14,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Do-an humansia APT' // 레이블을 바꿔서 입력
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script src="./js/hoEft.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".eft-wrap > ul > li").hoEft({
+                intervalTime : 2000,
+                slideSpeed : 1000
+            });
+        });
+    </script>
+</head>
+<body onload="initialize()">
+    <div id="wrap">
+        <header id="hd">
+            <label  data-index="0">
+                <span class="laLine"></span>
+                Intro
+            </label>
+            <label  data-index="1">
+                <span class="laLine"></span>
+                Design method
+            </label>
+            <label  data-index="2">
+                <span class="laLine"></span>
+                Poltfolio
+            </label>
+            <label  data-index="3">
+                <span class="laLine"></span>
+                Ability
+            </label>
+            <label  data-index="4">
+                <span class="laLine"></span>
+                Contact
+            </label>
+        </header>
+        <div class="section" data-index="0">
+            <!--<div class="eft-wrap">
+                <ul>
+                    <li>
+                        <img src="./src/eft/hellowB.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./src/eft/imB.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./src/eft/ryuB.png" alt="">
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+        <div class="section" data-index="1">
+            <div class="secHd">
+                <h1 class="secTitle">Design methode</h1>
+            </div>
+            <div class="meth">
+                <ul class="workWrap">
+                    <li class="work">
+                        <img src="./src/01interview.jpg" alt="intervie" class="workImg left">
+                        <div class="workTxtWrap right">
+                            <h3 class="workTitle"><span>STEP1.</span> Needs</h3>
+                            <p class="workCmt">사용자의 needs 분석하기 위하여 가장 많은 시간을 소요합니다. 사용자의 needs를 분명히 하였을 때 가장 만족스러운 결과물이 나오기 때문입니다.</p>
+                            <p class="skillCmt">TOOLS</p>
+                            <ul class="skillWrap">
+                                <li>
+                                    <img src="./src/ico_alMind.png" alt="alMind">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_starUML.png" alt="starUML">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_ppt.png" alt="powepoint">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="work">
+                        <div class="workTxtWrap left">
+                            <h3 class="workTitle"><span>STEP2.</span> Concept Design</h3>
+                            <p class="workCmt">파악한 needs를 중심으로 패스트프로토타이핑과 그래픽 작업을 통해 기존의 영역을 재정의 하여 차별화되고 만족스러운 디자인을 이끌어 냅니다.</p>
+                            <p class="skillCmt">TOOLS</p>
+                            <ul class="skillWrap">
+                                <li>
+                                    <img src="./src/ico_balsamiq.png" alt="balsamiq">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_oven.png" alt="oven">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_protonow.png" alt="protonow">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_ppt.png" alt="powerpoint">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_ps.png" alt="photoshop">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_ai.png" alt="illustrator">
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="./src/02concept.jpg" alt="concept" class="workImg right">
+                    </li>
+                    <li class="work">
+                        <img src="./src/03proto.jpg" alt="prototyping" class="workImg left">
+                        <div class="workTxtWrap right">
+                            <h3 class="workTitle"><span>STEP3.</span> Prototyping</h3>
+                            <p class="workCmt">패스트프로토타이핑 된 결과물을 토대로 needs를 다시 한번 확인합니다. 목표를 분석하고, 목표를 달성하기 위한 세부 기능들을 결정합니다.</p>
+                            <p class="skillCmt">TOOLS</p>
+                            <ul class="skillWrap">
+                                <li>
+                                    <img src="./src/ico_oven.png" alt="oven">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_axure.png" alt="axure">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_ppt.png" alt="powepoint">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_pixate.png" alt="pixate">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_invision.png" alt="invision">
+                                </li>
+                                <li>
+                                    <img src="./src/ico_fluidUI.png" alt="fluidUI">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section" data-index="2">
+            <div class="meth">
+                <ul class="workWrap">
+                    <li class="work">
+                        <div class="workTxtWrap left">
+                            <h3 class="workTitle"><span>STEP4.</span> Coding</h3>
+                            <p class="workCmt">UI/UX를 구현하고 세세한 기능들을 정의하고 연동시킵니다. 다른 분야의 기술자들과의 협업이 요구됩니다. </p>
+                            <ul class="toolsWrap">
+                                <li class="tools">
+                                    <p class="skillCmt">TOOLS</p>
+                                    <ul class="skillWrap">
+                                        <li>
+                                            <img src="./src/ico_brackets.png" alt="brackets">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_notepad.png" alt="notepad">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_sublimetext.png" alt="sublimetext">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_atom.png" alt="atom">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_git.png" alt="git">
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="tools">
+                                    <p class="skillCmt">LANGUAGE</p>
+                                    <ul class="skillWrap">
+                                        <li>
+                                            <img src="./src/ico_html.png" alt="html">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_css.png" alt="css">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_scss.png" alt="scss">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_js.png" alt="javaScript">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_jQuery.png" alt="jQuery">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_php.png" alt="php">
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="tools">
+                                    <p class="skillCmt">BUILDER</p>
+                                    <ul class="skillWrap">
+                                        <li>
+                                            <img src="./src/ico_gnu.png" alt="gnuboard5">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_wp.png" alt="wordpress">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_cafe.png" alt="cafe24">
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="tools">
+                                    <p class="skillCmt">FRAMEWORK & LIBRARY</p>
+                                    <ul class="skillWrap">
+                                        <li>
+                                            <img src="./src/ico_jQueryUI.png" alt="jQueryUI">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_jQueryMobile.png" alt="jQueryMobile">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_boot.png" alt="bootstrap">
+                                        </li>
+                                        <li>
+                                            <img src="./src/ico_foundation.png" alt="foundation">
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="./src/04-1coding.jpg" alt="coding" class="workImg right">
+                    </li>
+                    <li class="work">
+                        <img src="./src/05uitesting.jpg" alt="testing" class="workImg left">
+                        <div class="workTxtWrap right">
+                            <h3 class="workTitle"><span>STEP5.</span> Testing</h3>
+                            <p class="workCmt">사용자 경험을 중심으로 구현된 기능들의 타당성과 편리성을 고려하고 심미성과 안정성, 크로스 브라우징과 기기호환성 등 성능 최적화 과정을 수행합니다.</p>
+                            <p class="skillCmt">Daum Troy, Browsershots, Moncat, validator etc...</p>
+                        </div>
+                    </li>
+                    <li class="work">
+                        <div class="workTxtWrap left">
+                            <h3 class="workTitle"><span>STEP6.</span> Complete? not yet.</h3>
+                            <p class="workCmt">어떤 제품에도 완성은 있으나 완벽은 없습니다. 완벽은 이루는 것이 아니라 추구하는 것이고, 변화무쌍하며, 가치는 항상 변합니다. 그것을 인정하고 좇는것이 좋은 디자인이고 웹 프로그래밍입니다.</p>
+                            <p class="skillCmt">TOOLS - All of my skill</p>
+                        </div>
+                        <img src="./src/04-2coding.jpg" alt="coding" class="workImg right">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section" data-index="3">
+            <div class="secHd">
+                <h1 class="secTitle">Poltfolio</h1>
+            </div>
+            <ul class="conWrap">
+                <li class="con">
+                    <div class="inner" style="background-image:url(./src/d1.jpg)">
+                        <a href="./d1/index.html" class="inner_a" target="_blank">
+                            <div class="txtWrap">
+                                <h2 class="txTitle">MERCEDES BENZE</h2>
+                            </div>
+                        </a>
+                    </div>
+<!--                    <div class="subBox">
+                        Theme
+                        URL
+                        Type
+                        Media
+                        Synopsys
+                        Tools
+                        Color scheme
+                        Font scheme
+                    </div>-->
+                </li>
+                <li class="con">
+                    <div class="inner" style="background-image:url(./src/d2.jpg)">
+                        <a href="./d2/index.html" class="inner_a" target="_blank">
+                            <div class="txtWrap">
+                                <h2 class="txTitle">Pirnter & Display MP</h2>
+                            </div>
+                        </a>
+                    </div>
+<!--                    <div class="subBox">
+                        subscrition
+                    </div>-->
+                </li>
+                <li class="con">
+                    <div class="inner" style="background-image:url(./src/d3.jpg)">
+                        <a href="./d3/index.html" class="inner_a" target="_blank">
+                            <div class="txtWrap">
+                                <h2 class="txTitle">Tim Burton Art Fair</h2>
+                            </div>
+                        </a>
+                    </div>
+<!--                    <div class="subBox">
+                        subscrition
+                    </div>-->
+                </li>
+                <li class="con">
+                    <div class="inner" style="background-image:url(./src/d4.jpg)">
+                        <a href="./d4/index.html" class="inner_a" target="_blank">
+                            <div class="txtWrap">
+                                <h2 class="txTitle">Life Wear ONICLO</h2>
+                            </div>
+                        </a>
+                    </div>
+<!--                    <div class="subBox">
+                        subscrition
+                    </div>-->
+                </li>
+                <li class="con">
+                    <div class="inner" style="background-image:url(./src/m1.jpg)">
+                        <a href="./m1/index.html" class="inner_a" target="_blank">
+                            <div class="txtWrap">
+                                <h2 class="txTitle">POSCO</h2>
+                            </div>
+                        </a>
+                    </div>
+<!--                    <div class="subBox">
+                        subscrition
+                    </div>-->
+                </li>
+                <li class="con">
+                    <div class="inner" style="background-image:url(./src/m2.jpg)">
+                        <a href="./m2/index.html" class="inner_a" target="_blank">
+                            <div class="txtWrap">
+                                <h2 class="txTitle">CULTWO FLOWER</h2>
+                            </div>
+                        </a>
+                    </div>
+<!--                    <div class="subBox">
+                        subscrition
+                    </div>-->
+                </li>
+                <li class="con">
+                    <div class="inner" style="background-image:url(./src/m3.jpg)">
+                        <a href="./m3/index.html" class="inner_a" target="_blank">
+                            <div class="txtWrap">
+                                <h2 class="txTitle">SEOUL HOUSING</h2>
+                            </div>
+                        </a>
+                    </div>
+<!--                    <div class="subBox">
+                        subscrition
+                    </div>-->
+                </li>
+                <li class="con">
+                    <div class="inner" style="background-image:url(./src/m4.jpg)">
+                        <a href="./m4/index.html" class="inner_a" target="_blank">
+                            <div class="txtWrap">
+                                <h2 class="txTitle">Creative Web Design</h2>
+                            </div>
+                        </a>
+                    </div>
+<!--                    <div class="subBox">
+                        subscrition
+                    </div>-->
+                </li>
+            </ul>
+            <div class="sLabelWrap"></div>
+        </div>
+        <div class="section" data-index="4">
+            <div class="secHd">
+                <h1 class="secTitle">Ability</h1>
+            </div>
+            <div class="abilityWrap">
+                <div class="abWrap1">
+                    <h3 class="abTitle">Language</h3>
+                    <div class="abInner">
+                        <label class="abLabel abLabel1">
+                            <p class="laTxt">
+                                HTML5<br/><strong>100%</strong>
+                            </p>
+                            <div class="laBg"></div>
+                        </label>
+                        <p class="abCmt">HTML 을 이용하여 CSS에 적합한 태그구조 설계가 가능합니다.</p>
+                    </div>
+                    <div class="abInner">
+                        <label class="abLabel abLabel2">
+                            <p class="laTxt">
+                                CSS3<br/><strong>100%</strong>
+                            </p>
+                            <div class="laBg"></div>
+                        </label>
+                        <p class="abCmt">CSS 를 통한 스타일시트 및 애니메이션 작성이 가능하고 반응형 웹 제작이 가능합니다.</p>
+                    </div>
+                    <div class="abInner">
+                        <label class="abLabel abLabel3">
+                            <p class="laTxt">
+                                jQuery<br/><strong>70%</strong>
+                            </p>
+                            <div class="laBg laBg7"></div>
+                        </label>
+                        <p class="abCmt">기본 문법을 이해하고 이펙트 및 애니메이션 작성이 가능하고 plug-in 제작이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="abWrap1">
+                    <h3 class="abTitle">2D Graphic</h3>
+                    <div class="abInner">
+                        <label class="abLabel abLabel4">
+                            <p class="laTxt">
+                                Photoshop<br/><strong>100%</strong>
+                            </p>
+                            <div class="laBg"></div>
+                        </label>
+                        <p class="abCmt">배너, 인쇄물, UI/UX, 로고, 엠블럼, CI/BI 디자인, 이미지 편집, 인물보정 및 리터칭, GIF 및 패턴 제작, 디지털화 작업 이 가능합니다.</p>
+                    </div>
+                    <div class="abInner">
+                        <label class="abLabel abLabel5">
+                            <p class="laTxt">
+                                Illustrator<br/><strong>100%</strong>
+                            </p>
+                            <div class="laBg"></div>
+                        </label>
+                        <p class="abCmt">배너, 인쇄물, UI/UX, 로고, 엠블럼, CI/BI 디자인, 벡터도형 편집, SVG 및 패턴 제작, 폰트제작 이 가능합니다.</p>
+                    </div>
+                    <div class="abInner">
+                        <label class="abLabel abLabel6">
+                            <p class="laTxt">
+                                Indesign<br/><strong>60%</strong>
+                            </p>
+                            <div class="laBg laBg6"></div>
+                        </label>
+                        <p class="abCmt">배너, 인쇄물, UI/UX, 로고, 엠블럼, CI/BI 디자인, 많은 페이지의 인쇄물 편집이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="abWrap2">
+                    <h3 class="abTitle">Assist Tools</h3>
+                    <img src="./src/ico_alMind.png" alt="alMind">
+                    <img src="./src/ico_starUML.png" alt="starUML">
+                    <img src="./src/ico_balsamiq.png" alt="balsamiq">
+                    <img src="./src/ico_oven.png" alt="oven">
+                    <img src="./src/ico_protonow.png" alt="protonow">
+                    <img src="./src/ico_ppt.png" alt="powerpoint">
+                    <img src="./src/ico_ps.png" alt="photoshop">
+                    <img src="./src/ico_ai.png" alt="illustrator">
+                    <img src="./src/ico_oven.png" alt="oven">
+                    <img src="./src/ico_axure.png" alt="axure">
+                    <img src="./src/ico_pixate.png" alt="pixate">
+                    <img src="./src/ico_invision.png" alt="invision">
+                    <img src="./src/ico_fluidUI.png" alt="fluidUI">
+                    <img src="./src/ico_brackets.png" alt="brackets">
+                    <img src="./src/ico_notepad.png" alt="notepad">
+                    <img src="./src/ico_sublimetext.png" alt="sublimetext">
+                    <img src="./src/ico_atom.png" alt="atom">
+                    <img src="./src/ico_git.png" alt="git">
+                    <img src="./src/ico_html.png" alt="html">
+                    <img src="./src/ico_css.png" alt="css">
+                    <img src="./src/ico_scss.png" alt="scss">
+                    <img src="./src/ico_js.png" alt="javaScript">
+                    <img src="./src/ico_jQuery.png" alt="jQuery">
+                    <img src="./src/ico_php.png" alt="php">
+                    <img src="./src/ico_gnu.png" alt="gnuboard5">
+                    <img src="./src/ico_wp.png" alt="wordpress">
+                    <img src="./src/ico_cafe.png" alt="cafe24">
+                    <img src="./src/ico_jQueryUI.png" alt="jQueryUI">
+                    <img src="./src/ico_jQueryMobile.png" alt="jQueryMobile">
+                    <img src="./src/ico_boot.png" alt="bootstrap">
+                    <img src="./src/ico_foundation.png" alt="foundation">
+                </div>
+            </div>
+        </div>
+        <div class="section" data-index="5">
+            <div class="secHd">
+                <h1 class="secTitle">Contact</h1>
+            </div>
+            <div class="contactWrap">
+                <div class="myIntro">
+                    <h3 class="myName">Yong Ji-Hyeok</h3>
+                    <ul class="inIconWrap">
+                        <li class="inIcon">
+                            <a href="tel:01040200394">
+                                <img src="./src/icon_phone.png" alt="phone">
+                            </a>
+                            <p class="inTitle">Phone</p>
+                            <p class="inComment">+82 (0)10-4020-0394</p>
+                        </li>
+                        <li class="inIcon">
+                            <a href="mailto:hicuri@naver.com">
+                                <img src="./src/icon_mail.png" alt="e-mail">
+                            </a>
+                            <p class="inTitle">E-Mail</p>
+                            <p class="inComment">hicuri@naver.com</p>
+                        </li>
+                        <li class="inIcon">
+                            <img src="./src/icon_kakao.png" alt="kakao">
+                            <p class="inTitle">Kakao Talk</p>
+                            <p class="inComment">hicuri@naver.com</p>
+                        </li>
+                        <li class="inIcon">
+                            <img src="./src/icon_skype.png" alt="skype">
+                            <p class="inTitle">Skype</p>
+                            <p class="inComment">hicuri@naver.com</p>
+                        </li>
+                        <li class="inIcon">
+                            <a href="https://github.com/GitOnibi" target="_blank">
+                                <img src="./src/icon_git.png" alt="github">
+                            </a>
+                            <p class="inTitle">Github</p>
+                            <p class="inComment">GitOnibi</p>
+                        </li>
+                    </ul>
+                    <div id="map_canvas"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

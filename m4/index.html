@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <!-- subject=홈페이지 주제 -->
+    <meta name="subject" content="Creative_Web" />
+    <!-- title=홈페이지 이름 -->
+    <meta name="title" content="Creative_Web" />
+    <!-- author=홈페이지 제작자 -->
+    <meta name="author" content="RYU" />
+    <!-- keyword=홈페이지 키워드 -->
+    <meta name="keywords" content="Creative_Web" />
+    <!-- description=홈페이지 설명문 -->
+    <meta name="description" content="Creative_Web" />
+    <title>Creative_Web</title>
+    <link rel="stylesheet" href="./grid.css" />
+    <style>
+    /* font */
+        /* font-family: 'Noto Sans KR', sans-serif; */
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); 
+    /* normalize */    
+        * { margin:0; padding:0; }
+        html, body { width:100%; height:100%; }
+        a { text-decoration:none; }
+        ul { list-style:none; }
+        img { border:0; }
+        .ck { display:none; }
+    /* common */
+        #contain {
+            position:relative;
+            width:100%;
+            overflow-x:hidden;
+        }
+    /* header */
+        #hd {
+            transition:0.5s;
+            overflow:hidden;
+            width:100%; height:50px;
+            background:linear-gradient(to top, #47ad76, #40c17c);
+        }
+        .hd_title {
+            float:left;
+            height:50px;
+            font-size:1.3em; font-weight:bold;
+            line-height:50px;
+            margin-left:10%;
+        }
+        .collap_label {
+            float:right;
+            display:block;
+            width:50px; height:50px;
+            background-image:url(./img/btn_collap_open.jpg);
+            background-size:35px 35px;
+            background-repeat:no-repeat;
+            background-position:center center;
+            margin-right:10%;
+        }
+        #gnb {
+            clear:both;
+            width:100%; height:100px;
+        }
+        .gnb_li {
+            padding:0px 0% 5px 10%;
+        }
+        .gnb_li::after {
+            content:"";
+            display:block;
+            width:90%; height:2px;
+            background-color:#fff;
+        }
+        .gnb_li_a {
+            font-size:0.8em; font-weight:bold;
+            color:#fff;
+        }
+        input#collap_input:checked ~ #hd { height:150px; }
+        input#collap_input:checked ~ #hd .collap_label { background-image:url(./img/btn_collap_close.jpg); }
+    /* section */
+        .page {
+            width:100%;
+            margin:0 auto;
+            padding-left:5%; padding-right:5%;
+            box-sizing:border-box;
+        }
+        .page_title {
+            width:100%;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size:1.8rem; font-weight:bold;
+            color:555;
+            text-align:center; line-height:6;
+        }
+        .page_title:nth-of-type(1) { line-height:3; }
+        .page_title::after {
+            content:"";
+            display:block;
+            width:20%; height:5px;
+            background-color:#ccc;
+            margin:0 auto;
+            margin-top:-20px;
+        }
+        .page_comment {
+            width:100%;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size:1.2rem;
+            color:#555;
+            text-align:center; line-height:3;
+        }
+        #mainVS {
+            position:relative;
+            clear:both;
+            width:100%; height:560px;
+            background-image:url(./img/front-end.png);
+            background-size:auto 70%;
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-color:#7c6eab;
+            background-attachment:fixed;
+        }
+        form#frm1 {
+            position:absolute; left:50%; bottom:5%;
+            transform:translate(-50%,0%);
+            display:block;
+            width:100%;
+            border:0; outline:0;
+        }
+        input#mailTo {
+            display:block;
+            width:50%; height:40px;
+            border:0; outline:0;
+            margin:0 auto;
+            margin-top:10px; margin-bottom:10px;
+        }
+         input#mailTo[placeholder] {
+            text-align: center;
+             color:#999;
+        }
+        input#submit {
+            display:block;
+            width:50%; height:30px;
+            background-color:#47ad76;
+            outline:0;
+            color:#fff;
+            font-weight:bold;
+            margin:0 auto;
+            margin-top:10px; margin-bottom:10px;
+        }
+        #page1 {
+            clear:both;
+        }
+        .page1_img {
+            display:block;
+            width:100%; height:200px;
+            background-image:url(./img/front-end2.jpg);
+            background-size:auto 200px;
+            background-position:center center;
+            background-repeat:no-repeat;
+        }
+        #page2 {
+            clear:both;
+            background:linear-gradient(to top, #47ad76, #40c17c);
+            padding-top:50px; padding-bottom:50px;
+        }
+        .page2_ul {
+            width:100%;
+        }
+        .page2_ul_li {
+            float:left;
+            width:100%;
+        }
+        .title_icon {
+            display:block;
+            width:15%; height:auto;
+            margin:0 auto;
+            margin-top:20px;
+        }
+        .s_title {
+            font-size:1.2rem; font-weight:bold;
+            color:#fff;
+            text-align:center; line-height:2;
+        }
+        #page2 .page_comment {
+            color:#fff;
+        }
+        #page3 {
+            clear:both;
+            padding-top:50px; padding-bottom:50px;
+        }
+    /* footer */
+        #ft {
+            clear:both;
+            width:100%;
+        }
+        .ft_iconwrap {
+            width:90%;
+            margin:0 auto;
+        }
+        .ft_iconwrap_li {
+            float:left;
+            width:33.33%; height:50px;
+            background-size:30px auto;
+            background-position:center center;
+            background-repeat:no-repeat;
+        }
+        .ft_iconwrap_li:nth-of-type(1) { background-image:url(./img/android_icon.png); }
+        .ft_iconwrap_li:nth-of-type(2) { background-image:url(./img/ios_icon.png); }
+        .ft_iconwrap_li:nth-of-type(3) { background-image:url(./img/windows_icon.png); }
+        .copyrights {
+            clear:both;
+            font-size:0.5rem;
+            text-align:center;
+            padding-top:20px; padding-bottom:20px;
+        }
+    </style>
+    <!-- CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+    <script> 
+        //좌표 값을 바꿔서 입력 36.349305, 127.377677
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(36.349305, 127.377677);
+            var mapOptions = {
+                zoom: 17,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Contact to Me' // 레이블을 바꿔서 입력
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body>
+    <div id="contain">
+        <input type="checkbox" id="collap_input" class="ck">
+        <header id="hd">
+            <p class="hd_title">Creative Web</p>
+            <label for="collap_input" class="collap_label"></label>
+            <ul id="gnb">
+                <li class="gnb_li">
+                    <a href="#page1" class="gnb_li_a">Work's</a>
+                </li>
+                <li class="gnb_li">
+                    <a href="#page2" class="gnb_li_a">How to make Web_</a>
+                </li>
+                <li class="gnb_li">
+                    <a href="#page3" class="gnb_li_a">Contect to Me</a>
+                </li>
+            </ul>
+        </header>
+        <section id="mainVS" class="page">
+            <h1 class="page_title">What is Creative Web?</h1>
+            <form action="mail.php" id="frm1">
+                <input type="text" placeholder="e-mail address" id="mailTo">
+                <input type="submit" placeholder="SEND" id="submit">
+            </form>
+            <script>
+                $("#submit:submit").click(function() {
+                    mailToMe();
+                });
+                function mailToMe() {
+                    if($("#mailTo").val() == "") {
+                        alert("e-mail address is empty. pleas try again.");
+                        return;
+                    } else {
+                        alert("thank you");
+                    }
+                }
+                document.getElementById("frm1").submit();
+            </script>
+        </section>
+        <section id="page1" class="page">
+            <h1 class="page_title">Work's</h1>
+            <p class="page_comment">
+                is simply dummy text of the printing and typesetting industry.
+            </p>
+            <div class="page1_img"></div>
+            <p class="page_comment">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>           
+        </section>
+        <section id="page2" class="page">
+            <h1 class="page_title">How to make Web_</h1>
+            <ul class="pag2_ul">
+                <li class="pag2_ul_li">
+                    <img src="./img/f_icon1.png" alt="그룹 작업" class="title_icon">
+                    <h3 class="s_title">Group Work's</h3>
+                    <p class="page_comment">Lorem Ipsum has been the industry's standard dummy text ever since</p>  
+                </li>
+                <li class="pag2_ul_li">
+                    <img src="./img/f_icon2.png" alt="2d 그래픽 작업" class="title_icon">
+                    <h3 class="s_title">2D Graphic Design</h3>
+                    <p class="page_comment">Lorem Ipsum has been the industry's standard dummy text ever since</p>  
+                </li>
+                <li class="pag2_ul_li">
+                    <img src="./img/f_icon3.png" alt="리 패키징" class="title_icon">
+                    <h3 class="s_title">Repackaging</h3>
+                    <p class="page_comment">Lorem Ipsum has been the industry's standard dummy text ever since</p>   
+                </li>
+                <li class="pag2_ul_li">
+                    <img src="./img/f_icon4.png" alt="커뮤니케이션" class="title_icon">
+                    <h3 class="s_title">Communication</h3>
+                    <p class="page_comment">Lorem Ipsum has been the industry's standard dummy text ever since</p>  
+                </li>
+                <li class="pag2_ul_li">
+                    <img src="./img/f_icon5.png" alt="애프터서비스" class="title_icon">
+                    <h3 class="s_title">A/S</h3>
+                    <p class="page_comment">Lorem Ipsum has been the industry's standard dummy text ever since</p> 
+                </li>
+                <li class="pag2_ul_li">
+                    <img src="./img/f_icon6.png" alt="그외" class="title_icon">
+                    <h3 class="s_title">ETC.</h3>
+                    <p class="page_comment">Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                </li>
+            </ul>
+        </section>
+        <section id="page3" class="page">
+            <h1 class="page_title">Contect to Me</h1>
+            <!-- 구글지도 API -->
+            <article class="full_col h300" style="margin:50px 0px 50px 0px">
+                <div id="map_canvas" style="width:100%; height:300px"></div>
+            </article>
+        </section>
+        <footer id="ft">
+            <ul class="ft_iconwrap">
+                <li class="ft_iconwrap_li"></li>
+                <li class="ft_iconwrap_li"></li>
+                <li class="ft_iconwrap_li"></li>
+            </ul>
+            <p class="copyrights">© 2018 RYU. All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>

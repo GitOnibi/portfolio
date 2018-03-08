@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>BENZ Sedans &amp; Wagons</title>
+	<style>
+	* { margin:0px; padding:0px; }
+        body, html { width:100%; height:100%; }
+        ul { list-style:none; }
+        a { text-decoration:none; color:#fff; }
+        .ck { display:none; }
+        #container {
+            position:relative;
+            width:100%; min-width:1200px;
+            overflow:hidden;
+        }
+    /* header */
+        #fgnbwrap { width:100%;  min-width:1200px; height:90px; background-color:#000; position:fixed; z-index:100; }	
+		.tnb { width:100%; height:60px; }
+		.tnb .am { float:left; margin-left:1%; font-size:0px; padding:15px; }
+		.tnb .logo { float:left; margin-left:41%; margin-top:10px; font-size:0px; }
+		.tnb .logo img { height:40px; width:auto; }
+		.tnb .rmenu { float:right; margin-right:1%; font-size:0px; border-left:1px solid #555; }
+        .rmenu li { float:left; padding:15px; }
+        .rmenu li img { width:30px; height:auto; }
+		.gnb { clear:both; width:100%; height:30px; border-top:1px solid #555; }
+        .mainmenu { width:1000px; height:30px; margin:0 auto; }
+        .mainmenu > li { float:left; width:200px; height:30px; text-align:center; }
+        .submenu { display:none; position:absolute; left:0px; width:1920px; height:50px; background-color:rgba(0,0,0,0.2); }
+        .submenu li { float:left; line-height:50px; text-align:center; width:300px; }
+        .submenu1 { padding-left:425px; }
+        .submenu2 { padding-left:625px; }
+        .submenu3 { padding-left:825px; }
+        .submenu4 { padding-left:1000px; }
+        .submenu5 { padding-left:1200px; }
+        .menu:hover > .submenu { display:block; }
+    /* all menu pop */
+        #fgnbck:checked ~ #amwrap {
+            display:block;
+            animation-name:allmenu;
+            animation-duration:0.5s;
+        }
+        @keyframes allmenu {
+            from { opacity:0; }
+            to { opacity:1; }
+        }
+        .am img:hover { opacity:0.5; }
+		#amwrap {
+            position:absolute; left:0; top:0px;
+            display:none;
+            width:1920px; height:1080px;
+            background-color:rgba(0,0,0,0.5);
+        }
+		#amwrap .amhead { width:800px; height:90px; background-color:#000; border-bottom:1px solid #aaa; }
+        #amwrap .amhead span img {
+            display:block;
+            float:left;
+            width:auto; height:30px;
+            margin-left:220px; margin-top:30px;
+        }
+		#amwrap .amhead .amcl { float:right; font-size:0px; }
+		#amwrap .amhead .amcl img { display:block; width:90px; height:90px; }
+		#amwrap .amsection {
+            float:left;
+            width:710px; height:990px;
+            background-color:#555;
+        }
+        .amTitle {
+            display:block;
+            font-size:2.2rem; font-weight:bold;
+            text-indent:40px; line-height:2;
+            color:#fff;
+            text-shadow:2px 2px 4px rgba(0,0,0,0.8);
+        }
+        .amTitle::after {
+            content:"";
+            display:block;
+            width:50px; height:3px;
+            background-color:#fff;
+            margin-left:40px; margin-top:-10px;
+        }
+        .amItem {
+            display:block;
+            font-size:1.2rem;
+            text-indent:60px; line-height:2;
+            color:antiquewhite;
+        }
+		#amwrap .amside {
+            float:left;
+            width:90px; height:510px;
+            background-color:#999;
+        }
+        ul.snsWrap {
+            
+        }
+        ul.snsWrap li {
+            
+        }
+        ul.snsWrap li a {
+            
+        }
+    /* visual */
+	    #visual { clear:both; width:100%; height:960px; position:relative; }
+		.imgbox { width:500%; }
+		.imgbox li { float:left; width:20%; height:960px; }
+		.imgbox li a { display:block; width:100%; height:960px; background-attachment:fixed; }
+		.imgbox .vsimg1 a { background-image:url(./images/main01.jpg); }
+		.imgbox .vsimg2 a { background-image:url(./images/main02.jpg); }
+		.imgbox .vsimg3 a { background-image:url(./images/main03.jpg); }
+		.imgbox .vsimg4 a { background-image:url(./images/main04.jpg); }
+		.imgbox .vsimg5 a { background-image:url(./images/main05.jpg); }
+		.btn11 { 
+			display:block; position:absolute; top:50%; left:50px;
+			width:75px; height:75px;
+			background-image:url(./images/left.png); background-repeat:no-repeat; background-size:cover;
+			opacity:0.2;
+		}
+		.btn11:hover { opacity:0.5; }
+		.btn12 {
+			display:block; position:absolute; top:50%; right:50px;
+			width:75px; height:75px;
+			background-image:url(./images/right.png); background-repeat:no-repeat; background-size:cover;
+			opacity:0.2;
+		}
+		.btn12:hover { opacity:0.4; }
+		.imgbox .vsimg { display:none; }
+		#ra11:checked ~ .imgbox .vsimg1 { display:block; animation-name:vsani; animation-duration:1s; }
+		#ra12:checked ~ .imgbox .vsimg2 { display:block; animation-name:vsani; animation-duration:1s; }
+		#ra13:checked ~ .imgbox .vsimg3 { display:block; animation-name:vsani; animation-duration:1s; }
+		#ra14:checked ~ .imgbox .vsimg4 { display:block; animation-name:vsani; animation-duration:1s; }
+		#ra15:checked ~ .imgbox .vsimg5 { display:block; animation-name:vsani; animation-duration:1s; }
+		@keyframes vsani {
+			from { opacity:0; }
+			to { opacity:1; }
+		}
+    /* section */
+        section.page { width:100% height:960px; }
+        section#page1 { position:relative; font-size:0px; }
+		.p1tbox { position:absolute; top:180px; left:200px; width:400px; height:500px; background-color:rgba(255,255,255,0.5); }
+        .p1title{
+            width:300px; height:100px;
+            border-bottom:5px solid rgba(0,0,0,0.5);
+            margin:50px 50px 0px 50px;
+            text-align:center; line-height:90px;
+            font-size:40px;
+        }
+        .p1comment {
+            width:300px; height:300px;
+            margin:50px 50px 0px 50px;
+            text-align:center; line-height:30px;
+            font-size:20px;
+            }
+	    section#page2 { position:relative; font-size:0px; }
+		.p2tbox { position:absolute; top:180px; right:200px; width:400px; height:500px; background-color:rgba(255,255,255,0.5); }
+        .p2title{
+				width:300px; height:100px;
+				border-bottom:5px solid rgba(0,0,0,0.5);
+				margin:50px 50px 0px 50px;
+				text-align:center; line-height:90px;
+				font-size:40px;
+			}
+        .p2comment {
+				width:300px; height:300px;
+				margin:50px 50px 0px 50px;
+				text-align:center; line-height:30px;
+				font-size:20px;
+				}
+	    section#page3 { width:100%; height:420px; font-size:0px; }
+		.socialwrap { display:block; width:1340px; height:280px; margin:120px auto; }
+		.socialwrap li { float:left; margin-left:40px; transition:1s; box-shadow:10px 10px 10px rgba(0,0,0,0.2); cursor:pointer; }
+		.socialwrap li:hover { opacity:0.5; }
+		.socialwrap li p {
+            width:265px; height:130px;
+            text-indent:10px; font-size:0.8rem;
+            line-height:2;
+            padding:10px; box-sizing:border-box;
+        }
+        .socialwrap li .stitle {
+            height:50px;
+            font-size:1.1rem; font-weight:bold;
+            line-height:50px;
+        }
+    /* banner bar */ 
+        #fbarwrap { width:100%; height:40px; background-color:#000; color:#fff; overflow:hidden; transition:0.5s; }
+		.fbarbtn { width:100%; height:40px; background-color:#555; }
+		.fbar { width:100%; height:290px; }
+		.fblbl {
+			display:block; width:40px; height:40px; margin:0 auto;
+			background-image:url(./images/btn_menu.png); background-size:cover; background-repeat:no-repeat;
+		}
+        #fbck:checked ~ #fbarwrap {
+				height:330px;
+			}
+		.fbarvswrap { width:1320px; height:250px; margin:20px auto; }
+		.fbarvswrap img { width:510px; height:250px; }
+        .fbarleft { float:left; width:510px; overflow:hidden; position:relative; }
+        .leftvs { width:400%; transition:0.5s; }
+        .leftvs li { float:left; width:25%; }
+        .fbarright { float:right; width:510px; overflow:hidden; position:relative; }
+        .rightvs { width:400%; transition:0.5s; }
+        .rightvs li { float:left; width:25%; }
+        .fbarbtnwrap {
+				width:96px; height:12px;
+				position:absolute; left:50%; bottom:5%; transform:translate(-50%,0%); }
+        .fbarlbl {
+				float:left; width:10px; height:10px;
+				border:1px solid #999; border-radius:5px;
+				background-color:#fff;
+				margin:0 10px;
+			}
+        #leftvs1:checked ~ .fbarleft .leftvs { margin-left:0%; }
+        #leftvs1:checked ~ .fbarleft .llbl1 { background-color:#555; }
+        #leftvs2:checked ~ .fbarleft .leftvs { margin-left:-100%; }
+        #leftvs2:checked ~ .fbarleft .llbl2 { background-color:#555; }
+        #leftvs3:checked ~ .fbarleft .leftvs { margin-left:-200%; }
+        #leftvs3:checked ~ .fbarleft .llbl3 { background-color:#555; }	
+        #rightvs1:checked ~ .fbarright .rightvs { margin-left:0%; }
+        #rightvs1:checked ~ .fbarright .rlbl1 { background-color:#555; }
+        #rightvs2:checked ~ .fbarright .rightvs { margin-left:-100%; }
+        #rightvs2:checked ~ .fbarright .rlbl2 { background-color:#555; }
+        #rightvs3:checked ~ .fbarright .rightvs { margin-left:-200%; }
+        #rightvs3:checked ~ .fbarright .rlbl3 { background-color:#555; }
+    /* footer */
+        #ft {
+            width:100%; height:170px;
+            background-color:#000;
+            border-top:1px solid #555;
+            box-sizing:border-box;
+        }
+        .makerWrap {
+            width:100; height:100px;
+        }
+        .makerWrap_li {
+            float:left;
+            width:33.33%; height:100%;
+        }
+        .makerWrap_li_a {
+            display:block;
+            width:100%; height:100%;
+            background-size:30% auto;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+        .makerWrap_li:nth-of-type(1) .makerWrap_li_a {
+            background-image:url(./images/ftLogo_amg.jpg);
+        }
+        .makerWrap_li:nth-of-type(2) .makerWrap_li_a {
+            background-image:url(./images/ftLogo_daimler.jpg);
+        }
+        .makerWrap_li:nth-of-type(3) .makerWrap_li_a {
+            background-image:url(./images/ftLogo_smart.jpg);
+        }
+        #fnbWrap {
+            position:relative;
+            width:100%;
+        }
+        .lang {
+            position:absolute; left:100px; top:0;
+            width:101px;
+        }
+        .lang_li {
+            float:left;
+            width:50px; height:20px;
+        }
+        .lang_li:nth-of-type(1) {
+            border-right:1px solid #777;
+        }
+        .lang_li_a {
+            display:block;
+            width:100%;
+            font-size:0.7rem; font-weight:bold;
+            text-align:center; line-height:20px;
+            color:#555;
+        }
+        .fnb {
+            width:1200px;
+            margin:0 auto;
+        }
+        .fnb_li {
+            float:left;
+            width:100px; height:20px;
+        }
+        .fnb_li_a {
+            display:block;
+            color:#555;
+            width:100%;
+            font-size:0.7rem; font-weight:bold;
+            text-align:center; line-height:20px;
+        }
+        .top {
+            position:absolute; right:100px; top:0;
+            display:block;
+            width:100px; height:20px;
+            background-color:#aaa;
+            font-size:0.7rem; font-weight:bold;
+            text-align:center; line-height:20px;
+            color:#000;
+            cursor:pointer;
+        }
+	</style>
+</head>
+<body>
+	<div id="container">
+		<nav id="fgnbwrap">
+			<div class="tnb">
+				<input type="checkbox" name="ck00" id="fgnbck" class="ck">
+				<label for="fgnbck" class="am"><img src="./images/btn_menu.png" alt="모든메뉴"></label>
+				<a href="index.html" class="logo"><img src="./images/logo.png" alt="벤츠로고"></a>
+				<ul class="rmenu">
+					<li class="login">
+					    <a href=""><img src="./images/login.png" alt="로그인"></a>
+				    </li>
+					<li class="like">
+					    <a href=""><img src="./images/like.png" alt="즐겨찾기"></a>
+				    </li>
+					<li class="cart">
+					    <a href=""><img src="./images/cart.png" alt="장바구니"></a>
+				    </li>
+					<li class="search">
+					    <a href=""><img src="./images/search.png" alt="검색"></a>
+				    </li>
+				</ul>
+				<div id="amwrap">
+					<div class="amhead">
+				        <span><img src="./images/logoTxt.png" alt=""></span>
+						<label for="fgnbck" class="amcl">
+						    <img src="./images/close.gif" alt="">
+				        </label>					
+					</div>
+					<div class="amsection">
+                        <h3 class="amTitle">C-Class</h3>
+                        <a href="" class="amItem">C-Class Sedan</a>
+                        <a href="" class="amItem">AMG C-Class Sedan</a>
+                        <h3 class="amTitle">E-Class</h3>
+                        <a href="" class="amItem">E-Class Sedan</a>
+                        <a href="" class="amItem">AMG E-Class Sedan</a>
+                        <h3 class="amTitle">S-Class</h3>
+                        <a href="" class="amItem">S-Class Sedan</a>
+                        <a href="" class="amItem">AMG S-Class Sedan</a>
+                        <h3 class="amTitle">Mercedes-Maybachs</h3>
+                        <a href="" class="amItem">Mercedes-Maybach</a>
+                        <h3 class="amTitle">E-Class Wagon</h3>
+                        <a href="" class="amItem">E-Class Wagon</a>
+                        <a href="" class="amItem">AMG E-Class Wagon</a>
+					</div>
+					<div class="amside">
+					    <ul class="snsWrap">
+                            <li>
+                                <a href=""><img src="./images/login.png" alt="로그인"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="./images/like.png" alt="즐겨찾기"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="./images/cart.png" alt="장바구니"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="./images/search.png" alt="검색"></a>
+                            </li>
+					    </ul>
+					</div>
+				</div>
+				<div id="poplogin"></div>
+				<div id="poplike"></div>
+				<div id="popsearch"></div>
+			</div>
+			<div class="gnb">
+				<ul class="mainmenu">
+					<li class="menu1 menu">
+						<a href="">C-Class</a>
+						<ul class="submenu1 submenu">
+							<li><a href="">C-Class Sedan</a></li>
+							<li><a href="">AMG C-Class Sedan</a></li>
+						</ul>
+					</li>
+					<li class="menu2 menu">
+						<a href="">E-Class</a>
+						<ul class="submenu2 submenu">
+							<li><a href="">E-Class Sedan</a></li>
+							<li><a href="">AMG E-Class Sedan</a></li>
+						</ul>
+					</li>
+					<li class="menu3 menu">
+						<a href="">S-Class</a>
+						<ul class="submenu3 submenu">
+							<li><a href="">S-Class Sedan</a></li>
+							<li><a href="">AMG S-Class Sedan</a></li>
+						</ul>
+					</li>
+					<li class="menu4 menu">
+						<a href="">Mercedes-Maybachs</a>
+						<ul class="submenu4 submenu">
+							<li><a href="">Mercedes-Maybach</a></li>
+						</ul>
+					</li>
+					<li class="menu5 menu">
+						<a href="">E-Class Wagon</a>
+						<ul class="submenu5 submenu">
+							<li><a href="">E-Class Wagon</a></li>
+							<li><a href="">AMG E-Class Wagon</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div id="visual">
+			<input type="radio" name="ck11" id="ra11" class="ck" checked />
+			<input type="radio" name="ck11" id="ra12" class="ck" />
+			<input type="radio" name="ck11" id="ra13" class="ck" />
+			<input type="radio" name="ck11" id="ra14" class="ck" />
+			<input type="radio" name="ck11" id="ra15" class="ck" />
+			<ul class="imgbox">
+				<li class="vsimg1 vsimg">
+					<a href=""></a>
+					<label for="ra15" class="btn11" ></label>
+					<label for="ra12" class="btn12" ></label>
+				</li>
+				<li class="vsimg2 vsimg">
+					<a href=""></a>
+					<label for="ra11" class="btn11" ></label>
+					<label for="ra13" class="btn12" ></label>
+				</li>
+				<li class="vsimg3 vsimg">
+					<a href=""></a>
+					<label for="ra12" class="btn11" ></label>
+					<label for="ra14" class="btn12" ></label>
+				</li>
+				<li class="vsimg4 vsimg">
+					<a href=""></a>
+					<label for="ra13" class="btn11" ></label>
+					<label for="ra15" class="btn12" ></label>
+				</li>
+				<li class="vsimg5 vsimg">
+					<a href=""></a>
+					<label for="ra14" class="btn11" ></label>
+					<label for="ra11" class="btn12" ></label>
+				</li>
+			</ul>
+		</div>
+		<section id="page1" class="page">
+			<a href=""><img src="./images/p01.jpg" alt=""></a>
+			<div class="p1tbox">
+				<h1 class="p1title">Lorem Ipsum</h1>
+				<p class="p1comment">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+		</section>
+		<section id="page2" class="page">
+			<a href=""><img src="./images/p02.jpg" alt=""></a>
+			<div class="p2tbox">
+				<h1 class="p2title">Lorem Ipsum</h1>
+				<p class="p2comment">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>	
+		</section>
+		<section id="page3" class="page">
+			<ul class="socialwrap">
+				<li>
+					<p class="stitle">Facebook</p>
+					<a href="https://ko-kr.facebook.com/MercedesBenzKorea/" class="facebook">
+					    <img src="./images/p3_1.jpg" alt="페이스북">
+					</a>
+					<p>페이스북에서 벤츠의 새로운 정보를 실시간으로 확인하시고 좋아요를 누르면 경품을 드립니다.</p>
+				</li>
+				<li>
+					<p class="stitle">Youtube</p>
+					<a href="https://www.youtube.com/results?search_query=benz" class="youtube">
+    					<img src="./images/p3_2.jpg" alt="유튜브">
+					</a>
+				</li>
+				<li>
+					<p class="stitle">Instargram</p>
+					<a href="https://www.instagram.com/mercedesbenzkr/" class="instagram">
+					    <img src="./images/p3_3.jpg" alt="인스타그램">
+					</a>
+				</li>
+				<li>
+					<p class="stitle">Blog</p>
+					<a href="http://mercedes-benz-promise.tistory.com/" class="blog">
+					    <img src="./images/p3_4.jpg" alt="블로그">
+					</a>
+					<p>블로그에서 벤츠의 새로운 정보를 실시간으로 확인하시고 이웃추가를 누르면 경품을 드립니다.</p>
+				</li>
+			</ul>
+		</section>
+		<input type="checkbox" name="ck22" id="fbck" class="ck" checked />
+		<div id="fbarwrap">
+			<div class="fbarbtn">
+				<label for="fbck" class="fblbl"></label>
+			</div>
+			<div class="fbar">
+				<div class="fbarvswrap">
+					<input type="radio" name="ck44" id="leftvs1" class="ck" checked>
+					<input type="radio" name="ck44" id="leftvs2" class="ck">
+					<input type="radio" name="ck44" id="leftvs3" class="ck">
+					<div class="fbarleft">
+						<ul class="leftvs">
+							<li><a href=""><img src="./images/left01.jpg" alt=""></a></li>
+							<li><a href=""><img src="./images/left02.jpg" alt=""></a></li>
+							<li><a href=""><img src="./images/left03.jpg" alt=""></a></li>
+						</ul>
+						<div class="fbarbtnwrap">
+							<label for="leftvs1" class="fbarlbl llbl1"></label>
+							<label for="leftvs2" class="fbarlbl llbl2"></label>
+							<label for="leftvs3" class="fbarlbl llbl3"></label>
+						</div>
+					</div>
+					<input type="radio" name="ck55" id="rightvs1" class="ck" checked>
+					<input type="radio" name="ck55" id="rightvs2" class="ck">
+					<input type="radio" name="ck55" id="rightvs3" class="ck">
+					<div class="fbarright">
+						<ul class="rightvs">
+							<li><a href=""><img src="./images/right01.jpg" alt=""></a></li>
+							<li><a href=""><img src="./images/right02.jpg" alt=""></a></li>
+							<li><a href=""><img src="./images/right03.jpg" alt=""></a></li>
+						</ul>
+						<div class="fbarbtnwrap">
+							<label for="rightvs1" class="fbarlbl rlbl1"></label>
+							<label for="rightvs2" class="fbarlbl rlbl2"></label>
+							<label for="rightvs3" class="fbarlbl rlbl3"></label>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<input type="checkbox" name="ck33" id="ftck" class="ck">
+		<footer id="ft">
+            <ul class="makerWrap">
+                <li class="makerWrap_li">
+                    <a href="https://www.mercedes-amg.com/en.html" class="makerWrap_li_a"></a>
+                </li>
+                <li class="makerWrap_li">
+                    <a href="http://www.daimler.com/" class="makerWrap_li_a"></a>
+                </li>
+                <li class="makerWrap_li">
+                    <a href="http://www.smart.com/" class="makerWrap_li_a"></a>
+                </li>
+            </ul>
+            <nav id="fnbWrap">
+                <ul class="lang">
+                    <li class="lang_li">
+                        <a href="" class="lang_li_a">English</a>
+                    </li>
+                    <li class="lang_li">
+                        <a href="" class="lang_li_a">Korean</a>
+                    </li>
+                </ul>
+                <ul class="fnb">
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Provider/Privacy</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Provider</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Legal Notice</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Cookies</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Privacy Statement</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Contact</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Newsletter</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Newsfeed(RSS)</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Sitemap</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Careers</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Investor Relations</a></li>
+                    <li class="fnb_li"><a href="" class="fnb_li_a">Daimler AG</a></li>
+                </ul>
+                <a href="#visual" class="top">Top▲</a>
+            </nav>
+		</footer>
+	</div>
+</body>
+</html>

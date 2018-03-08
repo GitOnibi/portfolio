@@ -1,0 +1,40 @@
+/* footer style */
+#ft {
+    clear:both;
+    width:100%;
+    background:rgba(255,255,255,0.7);
+}
+@media screen and (min-height:700px) {
+    #ft {
+        position:fixed; left:0; bottom:0;
+        z-index:30;
+    }
+}
+.copyrights {
+    height:40px;
+    color:#999;
+    font-weight:bold;
+    text-align:center; line-height:40px;
+    background-color:#333;
+    background-image:url(./img/stripe.png);
+    background-size:cover;
+}
+/* 아이콘영역 */
+@media screen and (max-width:767px){
+    .icon_wrap { width:300px; height:150px; margin: 0 auto; }
+    .icon_wrap li { float:left; width:75px; height:75px; }
+    a[class*="ico"] { display:block; width:75px; height:75px; background-image:url(./img/icons.png); }
+}
+@media screen and (min-width:768px){
+    .icon_wrap { width:600px; height:100px; margin: 0 auto; transform:scale(1.1,1.1); }
+    .icon_wrap li { float:left; width:75px; height:75px; transform:scale(1.1,1.1); }
+    a[class*="ico"] { display:block; width:75px; height:75px; background-image:url(./img/icons.png); }
+}
+.icon1 {  }
+.icon2 { background-position:-75px 0px; }
+.icon3 { background-position:-150px 0px; }
+.icon4 { background-position:-225px 0px; }
+.icon5 { background-position:0px -75px; }
+.icon6 { background-position:-75px -75px; }
+.icon7 { background-position:-150px -75px; }
+.icon8 { background-position:-225px -75px; }
